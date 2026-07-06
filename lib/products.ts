@@ -1,4 +1,6 @@
-export type Category = "laptop" | "pc" | "komponen" | "aksesoris"
+export type Category = "laptop" | "pc" | "komponen" | "aksesoris" | "laptop-2nd"
+
+export type ProductGrade = "A" | "B" | "C"
 
 export type ProductVariant = {
   label: string
@@ -22,6 +24,11 @@ export type Product = {
   specs: { label: string; value: string }[]
   variants?: ProductVariant[]
   subcategory?: string
+  // Laptop 2nd specific fields
+  condition?: string
+  grade?: ProductGrade
+  batteryHealth?: number
+  warranty2nd?: string
 }
 
 export const categories: { id: Category; label: string; desc: string }[] = [
@@ -29,6 +36,7 @@ export const categories: { id: Category; label: string; desc: string }[] = [
   { id: "pc", label: "PC Rakitan", desc: "Desktop siap pakai" },
   { id: "komponen", label: "Komponen", desc: "CPU, GPU, & sparepart" },
   { id: "aksesoris", label: "Aksesoris", desc: "Periferal & gear" },
+  { id: "laptop-2nd", label: "Laptop 2nd", desc: "Laptop bekas bergaransi toko" },
 ]
 
 export const subcategories: Record<Category, string[]> = {
@@ -36,6 +44,7 @@ export const subcategories: Record<Category, string[]> = {
   pc: ["PC Gaming", "PC Workstation", "Mini PC", "Desktop PC"],
   komponen: ["VGA", "Processor", "RAM", "Storage", "Motherboard", "Cooling", "PSU", "Case"],
   aksesoris: ["Monitor", "Keyboard", "Mouse", "Headset", "Mousepad", "Webcam", "Speaker"],
+  "laptop-2nd": ["Grade A", "Grade B", "Grade C"],
 }
 
 export function formatRupiah(value: number) {
@@ -57,6 +66,7 @@ export const brandMap: Record<string, string[]> = {
   // Laptops / PCs
   "Gaming Laptop": ["Asus", "MSI", "Acer", "Lenovo", "HP", "Dell", "Razer", "Gigabyte"],
   laptop: ["Asus", "MSI", "Acer", "Lenovo", "HP", "Dell", "Razer", "Gigabyte"],
+  "laptop-2nd": ["Asus", "MSI", "Acer", "Lenovo", "HP", "Dell", "Razer", "Gigabyte", "Apple", "Toshiba"],
   pc: ["Oniforge", "Corsair", "MSI", "Asus", "Dell", "HP"],
   komponen: ["Intel", "AMD", "Corsair", "Samsung", "Western Digital", "ASUS", "MSI", "Gigabyte", "Noctua", "Seasonic"],
   aksesoris: ["Logitech", "Razer", "Corsair", "SteelSeries", "HyperX", "AOC", "ASUS", "Samsung", "LG", "BenQ", "ViewSonic", "Sennheiser"],

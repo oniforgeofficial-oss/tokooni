@@ -4,13 +4,14 @@ import { useRouter } from "next/navigation"
 import Image from "next/image"
 import {
   Plus, Edit, Trash2, ShoppingBag, Package, CheckCircle2,
-  Clock, XCircle, AlertCircle, RefreshCw, Phone, MapPin, User, Calendar, Download, Sparkles, Image as ImageIcon
+  Clock, XCircle, AlertCircle, RefreshCw, Phone, MapPin, User, Calendar, Download, Sparkles, Image as ImageIcon, Laptop
 } from "lucide-react"
 import type { Product, Category, ProductVariant } from "@/lib/products"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatRupiah, categories, subcategories, brandMap } from "@/lib/products"
 import { CustomPcTab } from "./custom-pc-tab"
+import { Laptop2ndTab } from "./laptop-2nd-tab"
 
 // ─── Order types ────────────────────────────────────────────────────
 type OrderStatus = "pending" | "confirmed" | "completed" | "cancelled"
@@ -323,7 +324,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const [isEditing, setIsEditing] = useState<Product | null>(null)
   const [isAdding, setIsAdding] = useState(false)
   const [formData, setFormData] = useState<Partial<Product>>({})
-  const [activeTab, setActiveTab] = useState<"products" | "orders" | "banner" | "custom-pcs">("products")
+  const [activeTab, setActiveTab] = useState<"products" | "laptop-2nd" | "orders" | "banner" | "custom-pcs">("products")
   const [isUploading, setIsUploading] = useState(false)
   const [itemToDelete, setItemToDelete] = useState<Product | null>(null)
   const router = useRouter()
@@ -577,6 +578,17 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
           <ImageIcon className="size-4" />
           Galeri Custom PC
         </button>
+        <button
+          onClick={() => setActiveTab("laptop-2nd")}
+          className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
+            activeTab === "laptop-2nd"
+              ? "border-primary text-primary"
+              : "border-transparent text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Laptop className="size-4" />
+          Laptop 2nd
+        </button>
       </div>
 
       {/* ── Products Tab ── */}
@@ -633,6 +645,9 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
 
       {/* ── Orders Tab ── */}
       {activeTab === "orders" && <OrdersTab />}
+
+      {/* ── Laptop 2nd Tab ── */}
+      {activeTab === "laptop-2nd" && <Laptop2ndTab />}
 
       {/* ── Custom PC Tab ── */}
       {activeTab === "custom-pcs" && <CustomPcTab />}

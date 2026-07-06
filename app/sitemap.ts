@@ -25,6 +25,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: "https://oniforge.id/laptop-2nd",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: "https://oniforge.id/tentang-kami",
       lastModified: new Date(),
       changeFrequency: "monthly",

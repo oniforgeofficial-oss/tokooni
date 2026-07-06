@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Barlow_Condensed } from "next/font/google"
 import { CartProvider } from "@/lib/cart-context"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -13,6 +13,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+})
+const barlowCondensed = Barlow_Condensed({
+  weight: ["600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-barlow-condensed",
 })
 
 export const metadata: Metadata = {
@@ -57,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${barlowCondensed.variable}`}
       suppressHydrationWarning
     >
       <body className="font-sans antialiased bg-background text-foreground">

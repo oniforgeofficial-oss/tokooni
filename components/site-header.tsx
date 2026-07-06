@@ -40,14 +40,21 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-1 lg:flex">
           <Link
             href="/produk"
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
           >
             Semua Produk
           </Link>
+          <Link
+            href="/laptop-2nd"
+            className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 transition-colors hover:bg-emerald-500/10 whitespace-nowrap"
+          >
+            <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            Laptop bekas
+          </Link>
           
-          <div className="relative group">
+          <div className="relative group whitespace-nowrap">
             <button
-              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus:outline-none"
+              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus:outline-none whitespace-nowrap"
             >
               Bantuan
               <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180 duration-200" />
@@ -83,13 +90,13 @@ export function SiteHeader() {
 
           <Link
             href="/tentang-kami"
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
           >
             Tentang Kami
           </Link>
           <Link
             href="/custom-pc"
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
           >
             Galeri Custom PC
           </Link>
@@ -97,7 +104,7 @@ export function SiteHeader() {
             href={WA_CUSTOM_PC}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10"
+            className="rounded-md px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 whitespace-nowrap"
           >
             Request Custom PC
           </a>
@@ -182,6 +189,14 @@ export function SiteHeader() {
               className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
             >
               Semua Produk
+            </Link>
+            <Link
+              href="/laptop-2nd"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10"
+            >
+              <span className="size-2 rounded-full bg-emerald-500" />
+              Laptop bekas
             </Link>
             
             <div className="border-t border-border/40 my-1.5 pt-1.5">
