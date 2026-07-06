@@ -5,6 +5,7 @@ import { Plus, Edit, Trash2, XCircle, Image as ImageIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import type { CustomPC } from "@/lib/api-custom-pcs"
+import { ImageCropper } from "@/components/image-cropper"
 
 export function CustomPcTab() {
   const [pcs, setPcs] = useState<CustomPC[]>([])
@@ -13,6 +14,7 @@ export function CustomPcTab() {
   const [isAdding, setIsAdding] = useState(false)
   const [formData, setFormData] = useState<Partial<CustomPC>>({})
   const [isUploading, setIsUploading] = useState(false)
+  const [cropFile, setCropFile] = useState<File | null>(null)
 
   const fetchPcs = useCallback(async () => {
     setLoading(true)
@@ -29,32 +31,35 @@ export function CustomPcTab() {
     fetchPcs()
   }, [fetchPcs])
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || [])
     if (files.length === 0) return
-    
+    setCropFile(files[0])
+    e.target.value = ""
+  }
+
+  const handleCropComplete = async (croppedFile: File) => {
+    setCropFile(null)
     setIsUploading(true)
     const newImages: string[] = [...(formData.images || [])]
     
-    for (const file of files) {
-      const data = new FormData()
-      data.append("file", file)
-      
-      try {
-        const res = await fetch("/api/upload", {
-          method: "POST",
-          body: data,
-        })
-        if (res.ok) {
-          const { url } = await res.json()
-          newImages.push(url)
-        } else {
-          alert(`Gagal mengupload gambar ${file.name}`)
-        }
-      } catch (err) {
-        console.error(err)
-        alert(`Terjadi kesalahan saat upload ${file.name}`)
+    const data = new FormData()
+    data.append("file", croppedFile)
+    
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: data,
+      })
+      if (res.ok) {
+        const { url } = await res.json()
+        newImages.push(url)
+      } else {
+        alert(`Gagal mengupload gambar ${croppedFile.name}`)
       }
+    } catch (err) {
+      console.error(err)
+      alert(`Terjadi kesalahan saat upload ${croppedFile.name}`)
     }
     
     setFormData(prev => ({ 
@@ -170,7 +175,6 @@ export function CustomPcTab() {
                 <input
                   type="file"
                   accept="image/png, image/jpeg, image/webp"
-                  multiple
                   onChange={handleFileUpload}
                   disabled={isUploading}
                   className="text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20"
@@ -269,6 +273,15 @@ export function CustomPcTab() {
             ))}
           </tbody>
         </table>
+      )}
+
+      {cropFile && (
+        <ImageCropper
+          imageFile={cropFile}
+          onCropComplete={handleCropComplete}
+          onCancel={() => setCropFile(null)}
+          aspectRatio={1}
+        />
       )}
     </div>
   )
