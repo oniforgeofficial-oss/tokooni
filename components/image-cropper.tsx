@@ -46,7 +46,16 @@ export function ImageCropper({ imageFile, onCropComplete, onCancel, aspectRatio 
 
   function onImageLoad(e: React.SyntheticEvent<HTMLImageElement>) {
     const { width, height } = e.currentTarget
-    setCrop(centerAspectCrop(width, height, aspectRatio))
+    const initialCrop = centerAspectCrop(width, height, aspectRatio)
+    setCrop(initialCrop)
+    
+    setCompletedCrop({
+      unit: 'px',
+      x: (initialCrop.x / 100) * width,
+      y: (initialCrop.y / 100) * height,
+      width: (initialCrop.width / 100) * width,
+      height: (initialCrop.height / 100) * height,
+    })
   }
 
   async function handleCrop() {
