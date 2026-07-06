@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import Image from "next/image"
 import { ChevronRight, Star } from "lucide-react"
 import { formatRupiah } from "@/lib/products"
 import { getProduct, getProducts } from "@/lib/api-products"
@@ -23,7 +22,7 @@ export async function generateMetadata({
   if (!product) return { title: "Produk tidak ditemukan — Oniforge" }
   return {
     title: `${product.name} — Oniforge`,
-    description: product.shortDesc,
+    description: product.shortDesc || product.condition?.slice(0, 160),
   }
 }
 
@@ -41,7 +40,6 @@ export default async function ProductDetailPage({
     .filter((p) => p.category === product.category && p.slug !== product.slug)
     .slice(0, 4)
 
-  // Fallback if not enough related products in the same category
   if (related.length < 4) {
     const otherProducts = products
       .filter((p) => p.slug !== product.slug && !related.some((r) => r.slug === p.slug))
@@ -55,26 +53,29 @@ export default async function ProductDetailPage({
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-      <nav className="flex items-center gap-1 text-sm text-muted-foreground overflow-hidden">
-        <Link href="/" className="hover:text-foreground shrink-0">
-          Beranda
-        </Link>
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-1 text-sm text-muted-foreground overflow-hidden mb-6">
+        <Link href="/" className="hover:text-foreground shrink-0">Beranda</Link>
         <ChevronRight className="size-4 shrink-0" />
-        <Link href="/produk" className="hover:text-foreground shrink-0">
-          Produk
-        </Link>
+        <Link href="/produk" className="hover:text-foreground shrink-0">Produk</Link>
         <ChevronRight className="size-4 shrink-0" />
         <span className="truncate text-foreground min-w-0">{product.name}</span>
       </nav>
 
-      <div className="mt-6 grid gap-8 lg:grid-cols-2 lg:gap-12">
-        <ProductGallery 
-          images={product.images?.length ? product.images : [product.image]} 
-          name={product.name} 
-          badge={product.badge} 
-        />
+      {/* 3-column layout */}
+      <div className="grid gap-6 lg:grid-cols-[380px_1fr_300px] lg:gap-8 xl:grid-cols-[420px_1fr_320px]">
 
-        <div className="flex flex-col">
+        {/* ── LEFT: Image Gallery ── */}
+        <div className="lg:self-start lg:sticky lg:top-20">
+          <ProductGallery
+            images={product.images?.length ? product.images : [product.image]}
+            name={product.name}
+            badge={product.badge}
+          />
+        </div>
+
+        {/* ── MIDDLE: Product Info + Description + Specs ── */}
+        <div className="flex flex-col min-w-0">
           <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
             {product.brand}
           </p>
@@ -88,15 +89,12 @@ export default async function ProductDetailPage({
               <span className="font-semibold">{product.rating}</span>
             </span>
             <Separator orientation="vertical" className="h-4" />
-            <span className="text-muted-foreground">
-              {product.sold} terjual
-            </span>
+            <span className="text-muted-foreground">{product.sold} terjual</span>
           </div>
 
-          <div className="mt-5 flex items-end gap-3">
-            <span className="text-3xl font-bold">
-              {formatRupiah(product.price)}
-            </span>
+          {/* Price (visible on mobile only — desktop shows in right panel) */}
+          <div className="mt-5 flex items-end gap-3 lg:hidden">
+            <span className="text-3xl font-bold">{formatRupiah(product.price)}</span>
             {product.oldPrice && (
               <span className="mb-1 text-base text-muted-foreground line-through">
                 {formatRupiah(product.oldPrice)}
@@ -105,26 +103,30 @@ export default async function ProductDetailPage({
             {discount > 0 && <Badge variant="destructive">-{discount}%</Badge>}
           </div>
 
-
-
-          <ProductActions product={product} />
-
-          <div className="mt-8">
-            <h2 className="text-lg font-semibold">Spesifikasi</h2>
-            <dl className="mt-3 overflow-hidden rounded-xl border">
-              {product.specs.map((spec, i) => (
-                <div
-                  key={spec.label}
-                  className={`flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 px-4 py-3 text-sm ${
-                    i % 2 === 0 ? "bg-card" : "bg-secondary/50"
-                  }`}
-                >
-                  <dt className="text-muted-foreground font-medium shrink-0">{spec.label}</dt>
-                  <dd className="font-medium sm:text-right break-words">{spec.value}</dd>
-                </div>
-              ))}
-            </dl>
+          {/* Mobile: ProductActions */}
+          <div className="lg:hidden">
+            <ProductActions product={product} />
           </div>
+
+          {/* Specs */}
+          {product.specs && product.specs.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-lg font-semibold mb-3">Spesifikasi</h2>
+              <dl className="overflow-hidden rounded-xl border">
+                {product.specs.map((spec, i) => (
+                  <div
+                    key={spec.label}
+                    className={`flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 px-4 py-3 text-sm ${
+                      i % 2 === 0 ? "bg-card" : "bg-secondary/50"
+                    }`}
+                  >
+                    <dt className="text-muted-foreground font-medium shrink-0">{spec.label}</dt>
+                    <dd className="font-medium sm:text-right break-words">{spec.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
 
           {/* Deskripsi Lengkap */}
           {product.condition && (
@@ -136,13 +138,62 @@ export default async function ProductDetailPage({
             </div>
           )}
         </div>
+
+        {/* ── RIGHT: Sticky Purchase Panel ── */}
+        <div className="hidden lg:block lg:self-start lg:sticky lg:top-20">
+          <div className="rounded-2xl border bg-card p-5 shadow-sm flex flex-col gap-4">
+            {/* Price */}
+            <div>
+              <div className="flex items-end gap-2 flex-wrap">
+                <span className="text-2xl font-bold">{formatRupiah(product.price)}</span>
+                {discount > 0 && <Badge variant="destructive">-{discount}%</Badge>}
+              </div>
+              {product.oldPrice && (
+                <span className="text-sm text-muted-foreground line-through">
+                  {formatRupiah(product.oldPrice)}
+                </span>
+              )}
+            </div>
+
+            <Separator />
+
+            {/* Stock */}
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-muted-foreground">Stok</span>
+              <span className={`font-semibold ${(product.stock ?? 0) <= 0 ? "text-red-500" : (product.stock ?? 0) <= 5 ? "text-amber-500" : "text-emerald-600 dark:text-emerald-400"}`}>
+                {(product.stock ?? 0) <= 0 ? "Habis" : `${product.stock} tersedia`}
+              </span>
+            </div>
+
+            {/* Grade badge if applicable */}
+            {product.grade && (
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-muted-foreground">Grade</span>
+                <span className={`font-semibold px-2 py-0.5 rounded-full text-xs border ${
+                  product.grade === "A"
+                    ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
+                    : product.grade === "B"
+                    ? "bg-amber-500/10 text-amber-600 border-amber-500/20"
+                    : "bg-rose-500/10 text-rose-600 border-rose-500/20"
+                }`}>
+                  Grade {product.grade}
+                </span>
+              </div>
+            )}
+
+            <Separator />
+
+            {/* ProductActions (qty, variant, buttons) */}
+            <ProductActions product={product} />
+          </div>
+        </div>
+
       </div>
 
+      {/* Related Products */}
       {related.length > 0 && (
         <section className="mt-16">
-          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
-            Produk Serupa
-          </h2>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">Produk Serupa</h2>
           <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {related.map((p) => (
               <ProductCard key={p.slug} product={p} />
