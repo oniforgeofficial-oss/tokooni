@@ -12,7 +12,6 @@ import { Input } from "@/components/ui/input"
 import { formatRupiah, categories, subcategories, brandMap } from "@/lib/products"
 import { CustomPcTab } from "./custom-pc-tab"
 import { Laptop2ndTab } from "./laptop-2nd-tab"
-import { ImageCropper } from "@/components/image-cropper"
 
 // ─── Order types ────────────────────────────────────────────────────
 type OrderStatus = "pending" | "confirmed" | "completed" | "cancelled"
@@ -327,7 +326,6 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const [formData, setFormData] = useState<Partial<Product>>({})
   const [activeTab, setActiveTab] = useState<"products" | "laptop-2nd" | "orders" | "banner" | "custom-pcs">("products")
   const [isUploading, setIsUploading] = useState(false)
-  const [cropFile, setCropFile] = useState<File | null>(null)
   const [itemToDelete, setItemToDelete] = useState<Product | null>(null)
   const router = useRouter()
 
@@ -393,44 +391,45 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
     router.refresh()
   }
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || e.target.files.length === 0) return
-    setCropFile(e.target.files[0])
-    e.target.value = ""
-  }
-
-  const handleCropComplete = async (croppedFile: File) => {
-    setCropFile(null)
+    
     setIsUploading(true)
     const category = formData.category || "aksesoris"
     const newImages: string[] = [...(formData.images || (formData.image ? [formData.image] : []))]
 
     try {
-      const data = new FormData()
-      data.append("file", croppedFile)
-      data.append("category", category)
+      for (let i = 0; i < e.target.files.length; i++) {
+        const file = e.target.files[i]
+        const data = new FormData()
+        data.append("file", file)
+        data.append("category", category)
 
-      const res = await fetch("/api/upload", {
-        method: "POST",
-        body: data,
-      })
-      
-      if (res.ok) {
-        const { url } = await res.json()
-        newImages.push(url)
-        setFormData({
-          ...formData,
-          image: newImages[0] || "",
-          images: newImages
+        const res = await fetch("/api/upload", {
+          method: "POST",
+          body: data,
         })
-      } else {
-        alert(`Gagal mengunggah gambar ${croppedFile.name}`)
+        
+        if (res.ok) {
+          const { url } = await res.json()
+          newImages.push(url)
+        } else {
+          alert(`Gagal mengunggah gambar ${file.name}`)
+        }
       }
+
+      setFormData({
+        ...formData,
+        image: newImages[0] || "",
+        images: newImages
+      })
     } catch (err) {
       console.error(err)
       alert("Terjadi kesalahan saat mengunggah gambar")
     } finally {
       setIsUploading(false)
+      // Reset file input
+      e.target.value = ""
     }
   }
 
@@ -866,6 +865,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                 <div className="flex flex-col gap-3 rounded-md border p-4 bg-background">
                   <Input 
                     type="file" 
+                    multiple 
                     accept="image/*" 
                     onChange={handleImageUpload} 
                     disabled={isUploading}
@@ -1030,16 +1030,6 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
           </div>
         </div>
       )}
-
-      {cropFile && (
-        <ImageCropper
-          imageFile={cropFile}
-          onCropComplete={handleCropComplete}
-          onCancel={() => setCropFile(null)}
-          aspectRatio={1}
-        />
-      )}
-
     </div>
   )
 }

@@ -5,7 +5,6 @@ import { Plus, Edit, Trash2, XCircle, Laptop, RefreshCw, ShieldCheck, Battery } 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatRupiah, type Product, type ProductGrade } from "@/lib/products"
-import { ImageCropper } from "@/components/image-cropper"
 
 const GRADE_CONFIG: Record<ProductGrade, { label: string; className: string; dot: string }> = {
   A: { label: "Grade A — Seperti Baru", className: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20", dot: "bg-emerald-500" },
@@ -23,7 +22,6 @@ export function Laptop2ndTab() {
   const [formData, setFormData] = useState<Laptop2ndFormData>({})
   const [isUploading, setIsUploading] = useState(false)
   const [filterGrade, setFilterGrade] = useState<ProductGrade | "all">("all")
-  const [cropFile, setCropFile] = useState<File | null>(null)
   const [itemToDelete, setItemToDelete] = useState<Product | null>(null)
 
   const fetchLaptops = useCallback(async () => {
@@ -39,26 +37,23 @@ export function Laptop2ndTab() {
 
   useEffect(() => { fetchLaptops() }, [fetchLaptops])
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || e.target.files.length === 0) return
-    setCropFile(e.target.files[0])
-    e.target.value = ""
-  }
-
-  const handleCropComplete = async (croppedFile: File) => {
-    setCropFile(null)
     setIsUploading(true)
     const newImages: string[] = [...(formData.images || (formData.image ? [formData.image] : []))]
     try {
-      const data = new FormData()
-      data.append("file", croppedFile)
-      data.append("category", "laptop-2nd")
-      const res = await fetch("/api/upload", { method: "POST", body: data })
-      if (res.ok) {
-        const { url } = await res.json()
-        newImages.push(url)
-      } else {
-        alert(`Gagal mengunggah ${croppedFile.name}`)
+      for (let i = 0; i < e.target.files.length; i++) {
+        const file = e.target.files[i]
+        const data = new FormData()
+        data.append("file", file)
+        data.append("category", "laptop-2nd")
+        const res = await fetch("/api/upload", { method: "POST", body: data })
+        if (res.ok) {
+          const { url } = await res.json()
+          newImages.push(url)
+        } else {
+          alert(`Gagal mengunggah ${file.name}`)
+        }
       }
       setFormData({ ...formData, image: newImages[0] || "", images: newImages })
     } catch (err) {
@@ -66,6 +61,7 @@ export function Laptop2ndTab() {
       alert("Terjadi kesalahan saat upload gambar")
     } finally {
       setIsUploading(false)
+      e.target.value = ""
     }
   }
 
@@ -283,7 +279,7 @@ export function Laptop2ndTab() {
           <div>
             <label className="mb-1 block text-sm font-medium">Upload Gambar</label>
             <div className="flex flex-col gap-3 rounded-md border p-4 bg-background">
-              <Input type="file" accept="image/*" onChange={handleImageUpload} disabled={isUploading} className="cursor-pointer" />
+              <Input type="file" multiple accept="image/*" onChange={handleImageUpload} disabled={isUploading} className="cursor-pointer" />
               {isUploading && <p className="text-sm text-primary animate-pulse">Sedang mengunggah...</p>}
               {Boolean(formData.images?.length || formData.image) && (
                 <div className="flex flex-wrap gap-2 mt-2">
@@ -524,16 +520,6 @@ export function Laptop2ndTab() {
           </div>
         </div>
       )}
-
-      {cropFile && (
-        <ImageCropper
-          imageFile={cropFile}
-          onCropComplete={handleCropComplete}
-          onCancel={() => setCropFile(null)}
-          aspectRatio={1}
-        />
-      )}
-
     </div>
   )
 }

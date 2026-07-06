@@ -670,6 +670,231 @@
     "sold": 0
   },
   {
+    "slug": "2nd-asus-rog-strix-g15-rtx3060",
+    "name": "ASUS ROG Strix G15 RTX 3060 [2nd]",
+    "brand": "Asus",
+    "category": "laptop-2nd",
+    "subcategory": "Grade A",
+    "price": 9500000,
+    "oldPrice": 15000000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.7,
+    "sold": 12,
+    "stock": 2,
+    "badge": "Grade A",
+    "shortDesc": "Laptop gaming bekas kondisi mulus, layar 15.6\" 144Hz, performa RTX 3060 masih kencang untuk semua game terkini.",
+    "condition": "Bekas, kondisi mulus, tidak ada cacat",
+    "grade": "A",
+    "batteryHealth": 87,
+    "warranty2nd": "Garansi toko 3 bulan",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 7 5800H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3060 6GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Mulus, tidak ada goresan"
+      }
+    ]
+  },
+  {
+    "slug": "2nd-lenovo-legion-5-rtx3050ti",
+    "name": "Lenovo Legion 5 RTX 3050 Ti [2nd]",
+    "brand": "Lenovo",
+    "category": "laptop-2nd",
+    "subcategory": "Grade A",
+    "price": 7200000,
+    "oldPrice": 11500000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.6,
+    "sold": 8,
+    "stock": 1,
+    "badge": "Grade A",
+    "shortDesc": "Lenovo Legion 5 bekas mulus, cocok untuk gaming & produktivitas, baterai masih sehat.",
+    "condition": "Bekas, kondisi sangat baik",
+    "grade": "A",
+    "batteryHealth": 82,
+    "warranty2nd": "Garansi toko 3 bulan",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i5-11400H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 Ti 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 165Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Sedikit bekas di bawah, layar mulus"
+      }
+    ]
+  },
+  {
+    "slug": "2nd-acer-nitro-5-rtx3060",
+    "name": "Acer Nitro 5 RTX 3060 [2nd]",
+    "brand": "Acer",
+    "category": "laptop-2nd",
+    "subcategory": "Grade B",
+    "price": 6800000,
+    "oldPrice": 12000000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.4,
+    "sold": 5,
+    "stock": 3,
+    "badge": "Grade B",
+    "shortDesc": "Acer Nitro 5 bekas kondisi baik, ada sedikit goresan minor di casing, semua fungsi normal.",
+    "condition": "Bekas, ada goresan minor di casing",
+    "grade": "B",
+    "batteryHealth": 74,
+    "warranty2nd": "Garansi toko 1 bulan",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i7-11800H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3060 6GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Goresan minor pada casing, layar oke"
+      }
+    ]
+  },
+  {
+    "slug": "2nd-msi-gf63-thin-rtx3050",
+    "name": "MSI GF63 Thin RTX 3050 [2nd]",
+    "brand": "MSI",
+    "category": "laptop-2nd",
+    "subcategory": "Grade A",
+    "price": 5500000,
+    "oldPrice": 9000000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.5,
+    "sold": 15,
+    "stock": 1,
+    "badge": "Grade A",
+    "shortDesc": "MSI GF63 Thin bekas tipis dan ringan, cocok gaming ringan dan kerja, kondisi mulus.",
+    "condition": "Bekas, kondisi mulus hampir seperti baru",
+    "grade": "A",
+    "batteryHealth": 91,
+    "warranty2nd": "Garansi toko 3 bulan",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i5-11400H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "8GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Mulus, seperti baru"
+      }
+    ]
+  },
+  {
+    "slug": "2nd-hp-victus-rtx3050",
+    "name": "HP Victus 16 RTX 3050 [2nd]",
+    "brand": "HP",
+    "category": "laptop-2nd",
+    "subcategory": "Grade B",
+    "price": 5900000,
+    "oldPrice": 10500000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.3,
+    "sold": 7,
+    "stock": 2,
+    "badge": "Grade B",
+    "shortDesc": "HP Victus bekas desain elegan, ada bekas pemakaian ringan, performa masih mantap untuk gaming.",
+    "condition": "Bekas, terdapat bekas pemakaian ringan",
+    "grade": "B",
+    "batteryHealth": 70,
+    "warranty2nd": "Garansi toko 1 bulan",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 5 5600H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "8GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "16.1\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Bekas pemakaian ringan, layar bersih"
+      }
+    ]
+  },
+  {
     "category": "laptop-2nd",
     "grade": "A",
     "batteryHealth": 95,
