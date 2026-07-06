@@ -1,0 +1,737 @@
+[
+  {
+    "slug": "laptop-gaming-titan-15",
+    "name": "Laptop Gaming Titan 15",
+    "brand": "Oniforge",
+    "category": "laptop",
+    "subcategory": "Gaming Laptop",
+    "price": 18999000,
+    "oldPrice": 21499000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.8,
+    "sold": 343,
+    "badge": "Terlaris",
+    "shortDesc": "Laptop gaming bertenaga dengan layar 15.6 inci 165Hz dan pendinginan ganda untuk performa maksimal.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i7-13700H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 4060 8GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR5"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "1TB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" QHD 165Hz"
+      }
+    ],
+    "stock": 0
+  },
+  {
+    "slug": "pc-rakitan-vortex-pro",
+    "name": "PC Rakitan Vortex Pro",
+    "brand": "Oniforge",
+    "category": "pc",
+    "subcategory": "PC Gaming",
+    "price": 24500000,
+    "image": "/products/pc-rakitan.png",
+    "rating": 4.9,
+    "sold": 128,
+    "badge": "Pilihan Editor",
+    "shortDesc": "Desktop gaming siap pakai dengan casing tempered glass dan lighting RGB yang memukau.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 7 7800X3D"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 4070 Ti"
+      },
+      {
+        "label": "RAM",
+        "value": "32GB DDR5 6000MHz"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "2TB NVMe SSD"
+      },
+      {
+        "label": "PSU",
+        "value": "850W 80+ Gold"
+      }
+    ],
+    "stock": 10
+  },
+  {
+    "slug": "monitor-ultrawide-curve-34",
+    "name": "Monitor Ultrawide Curve 34",
+    "brand": "Pixel",
+    "category": "aksesoris",
+    "subcategory": "Monitor",
+    "price": 7299000,
+    "oldPrice": 8199000,
+    "image": "/products/monitor.png",
+    "rating": 4.7,
+    "sold": 256,
+    "shortDesc": "Monitor ultrawide melengkung 34 inci dengan refresh rate 144Hz untuk pengalaman imersif.",
+    "specs": [
+      {
+        "label": "Ukuran",
+        "value": "34\" Ultrawide"
+      },
+      {
+        "label": "Resolusi",
+        "value": "3440 x 1440"
+      },
+      {
+        "label": "Refresh Rate",
+        "value": "144Hz"
+      },
+      {
+        "label": "Panel",
+        "value": "VA Curved 1500R"
+      },
+      {
+        "label": "Port",
+        "value": "HDMI 2.1, DP 1.4"
+      }
+    ],
+    "stock": 15
+  },
+  {
+    "slug": "keyboard-mekanikal-rapid-tkl",
+    "name": "Keyboard Mekanikal Rapid TKL",
+    "brand": "Forge",
+    "category": "aksesoris",
+    "subcategory": "Keyboard",
+    "price": 1499000,
+    "image": "/products/keyboard.png",
+    "rating": 4.6,
+    "sold": 891,
+    "badge": "Terlaris",
+    "shortDesc": "Keyboard mekanikal TKL dengan switch hot-swap dan keycaps PBT premium.",
+    "specs": [
+      {
+        "label": "Layout",
+        "value": "Tenkeyless (TKL)"
+      },
+      {
+        "label": "Switch",
+        "value": "Linear Hot-swap"
+      },
+      {
+        "label": "Keycaps",
+        "value": "PBT Double-shot"
+      },
+      {
+        "label": "Koneksi",
+        "value": "USB-C / Bluetooth"
+      },
+      {
+        "label": "Backlight",
+        "value": "RGB Per-key"
+      }
+    ],
+    "stock": 25
+  },
+  {
+    "slug": "mouse-gaming-photon-x",
+    "name": "Mouse Gaming Photon X",
+    "brand": "Forge",
+    "category": "aksesoris",
+    "subcategory": "Mouse",
+    "price": 799000,
+    "oldPrice": 999000,
+    "image": "/products/mouse.png",
+    "rating": 4.7,
+    "sold": 1204,
+    "shortDesc": "Mouse gaming nirkabel super ringan dengan sensor 26K DPI dan latensi rendah.",
+    "specs": [
+      {
+        "label": "Sensor",
+        "value": "Optical 26.000 DPI"
+      },
+      {
+        "label": "Berat",
+        "value": "59 gram"
+      },
+      {
+        "label": "Koneksi",
+        "value": "2.4GHz Wireless"
+      },
+      {
+        "label": "Baterai",
+        "value": "Hingga 90 jam"
+      },
+      {
+        "label": "Polling Rate",
+        "value": "1000Hz"
+      }
+    ],
+    "stock": 30
+  },
+  {
+    "slug": "vga-rtx-4070-super",
+    "name": "VGA RTX 4070 Super",
+    "brand": "Pixel",
+    "category": "komponen",
+    "subcategory": "VGA",
+    "price": 11999000,
+    "image": "/products/gpu.png",
+    "rating": 4.9,
+    "sold": 76,
+    "badge": "Stok Terbatas",
+    "shortDesc": "Kartu grafis bertenaga untuk gaming 1440p dan kreator konten dengan triple fan cooling.",
+    "specs": [
+      {
+        "label": "Chipset",
+        "value": "NVIDIA RTX 4070 Super"
+      },
+      {
+        "label": "Memori",
+        "value": "12GB GDDR6X"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "2.6 GHz"
+      },
+      {
+        "label": "Power",
+        "value": "220W"
+      },
+      {
+        "label": "Output",
+        "value": "3x DP, 1x HDMI"
+      }
+    ],
+    "stock": 8
+  },
+  {
+    "slug": "prosesor-ryzen-7-7800x3d",
+    "name": "Prosesor Ryzen 7 7800X3D",
+    "brand": "AMD",
+    "category": "komponen",
+    "subcategory": "Processor",
+    "price": 6499000,
+    "oldPrice": 7299000,
+    "image": "/products/cpu.png",
+    "rating": 4.9,
+    "sold": 184,
+    "shortDesc": "Prosesor gaming terbaik di kelasnya dengan teknologi 3D V-Cache.",
+    "specs": [
+      {
+        "label": "Core / Thread",
+        "value": "8 Core / 16 Thread"
+      },
+      {
+        "label": "Base Clock",
+        "value": "4.2 GHz"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "5.0 GHz"
+      },
+      {
+        "label": "Cache",
+        "value": "96MB L3 3D V-Cache"
+      },
+      {
+        "label": "Socket",
+        "value": "AM5"
+      }
+    ],
+    "stock": 12
+  },
+  {
+    "slug": "ram-corsair-vengeance-32gb",
+    "name": "RAM Corsair Vengeance 32GB",
+    "brand": "Corsair",
+    "category": "komponen",
+    "subcategory": "RAM",
+    "price": 1599000,
+    "image": "/products/efset-1782190635697.png",
+    "rating": 4.7,
+    "sold": 64,
+    "shortDesc": "Kit RAM DDR5 32GB untuk gaming dan produktivitas dengan latensi rendah.",
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "32GB (2x16GB)"
+      },
+      {
+        "label": "Tipe",
+        "value": "DDR5 6000MHz"
+      },
+      {
+        "label": "CAS Latency",
+        "value": "CL36"
+      },
+      {
+        "label": "Tegangan",
+        "value": "1.25V"
+      },
+      {
+        "label": "RGB",
+        "value": "Ya"
+      }
+    ],
+    "stock": 14
+  },
+  {
+    "slug": "ssd-samsung-980-pro-1tb",
+    "name": "SSD Samsung 980 Pro 1TB",
+    "brand": "Samsung",
+    "category": "komponen",
+    "subcategory": "Storage",
+    "price": 1899000,
+    "image": "/products/efset-1782190635697.png",
+    "rating": 4.8,
+    "sold": 92,
+    "shortDesc": "SSD NVMe M.2 1TB untuk sistem boot dan game cepat.",
+    "specs": [
+      {
+        "label": "Kapasitas",
+        "value": "1TB"
+      },
+      {
+        "label": "Tipe",
+        "value": "NVMe M.2 2280"
+      },
+      {
+        "label": "Kecepatan Baca",
+        "value": "7000 MB/s"
+      },
+      {
+        "label": "Kecepatan Tulis",
+        "value": "5100 MB/s"
+      },
+      {
+        "label": "Warranty",
+        "value": "5 tahun"
+      }
+    ],
+    "stock": 21
+  },
+  {
+    "slug": "cooler-master-hyper-212",
+    "name": "Cooler Master Hyper 212",
+    "brand": "Cooler Master",
+    "category": "komponen",
+    "subcategory": "Cooling",
+    "price": 399000,
+    "image": "/products/cpu.png",
+    "rating": 4.6,
+    "sold": 58,
+    "shortDesc": "Pendingin CPU tower hemat biaya dengan kipas 120mm dan heatpipe ganda.",
+    "specs": [
+      {
+        "label": "Tipe",
+        "value": "Air Cooler"
+      },
+      {
+        "label": "Fan",
+        "value": "120mm PWM"
+      },
+      {
+        "label": "Heatpipe",
+        "value": "4 Heatpipes"
+      },
+      {
+        "label": "Kompatibilitas",
+        "value": "Intel / AMD"
+      },
+      {
+        "label": "Garansi",
+        "value": "3 tahun"
+      }
+    ],
+    "stock": 26
+  },
+  {
+    "slug": "mouse-redragon-m910",
+    "name": "Redragon M910 Ranger",
+    "brand": "Redragon",
+    "category": "aksesoris",
+    "subcategory": "Mouse",
+    "price": 211900,
+    "image": "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/d838d7abf8a74252a82890cf6c1e5218~.jpeg.webp",
+    "rating": 4.8,
+    "sold": 168,
+    "shortDesc": "Mouse gaming wired dengan sensor presisi, desain ergonomis, dan RGB yang stylish.",
+    "specs": [
+      {
+        "label": "Sensor",
+        "value": "Optical 8000 DPI"
+      },
+      {
+        "label": "Koneksi",
+        "value": "USB Wired"
+      },
+      {
+        "label": "Tombol",
+        "value": "6 Tombol"
+      },
+      {
+        "label": "Berat",
+        "value": "85 gram"
+      },
+      {
+        "label": "RGB",
+        "value": "Ya"
+      }
+    ],
+    "stock": 22
+  },
+  {
+    "slug": "headset-gaming-sonic-7",
+    "name": "Headset Gaming Sonic 7",
+    "brand": "Forge",
+    "category": "aksesoris",
+    "subcategory": "Headset",
+    "price": 1299000,
+    "image": "/products/headset.png",
+    "rating": 4.5,
+    "sold": 533,
+    "shortDesc": "Headset gaming dengan surround 7.1 dan mikrofon noise-cancelling yang jernih.",
+    "specs": [
+      {
+        "label": "Driver",
+        "value": "50mm Neodymium"
+      },
+      {
+        "label": "Surround",
+        "value": "Virtual 7.1"
+      },
+      {
+        "label": "Mikrofon",
+        "value": "Detachable Noise-cancel"
+      },
+      {
+        "label": "Koneksi",
+        "value": "USB & 3.5mm"
+      },
+      {
+        "label": "Kompatibel",
+        "value": "PC, PS5, Switch"
+      }
+    ],
+    "stock": 18
+  },
+  {
+    "slug": "monitor-aoc-24g2sp",
+    "name": "AOC 24G2SP 24 inch",
+    "brand": "AOC",
+    "category": "aksesoris",
+    "subcategory": "Monitor",
+    "price": 1999000,
+    "image": "/products/monitor.png",
+    "rating": 4.7,
+    "sold": 111,
+    "shortDesc": "Monitor gaming 24 inch Full HD dengan refresh rate 144Hz dan panel Fast IPS.",
+    "specs": [
+      {
+        "label": "Ukuran",
+        "value": "24 inch"
+      },
+      {
+        "label": "Resolusi",
+        "value": "1920x1080"
+      },
+      {
+        "label": "Refresh Rate",
+        "value": "144Hz"
+      },
+      {
+        "label": "Panel",
+        "value": "Fast IPS"
+      },
+      {
+        "label": "Port",
+        "value": "HDMI, DisplayPort"
+      }
+    ],
+    "stock": 13
+  },
+  {
+    "slug": "laptop-asus-tuf-a15",
+    "name": "ASUS TUF Gaming A15",
+    "brand": "Asus",
+    "category": "laptop",
+    "subcategory": "Gaming Laptop",
+    "price": 14999000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.8,
+    "sold": 210,
+    "shortDesc": "Laptop gaming 15.6 inch dengan Ryzen 7, RTX 4060, dan sistem pendingin TUF.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 7 7435HS"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 4060"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR5"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "144Hz"
+      }
+    ],
+    "stock": 7
+  },
+  {
+    "slug": "pc-workstation-creator-pro",
+    "name": "PC Workstation Creator Pro",
+    "brand": "Oniforge",
+    "category": "pc",
+    "subcategory": "PC Workstation",
+    "price": 28990000,
+    "image": "/products/pc-rakitan.png",
+    "rating": 4.8,
+    "sold": 74,
+    "shortDesc": "PC workstation untuk editing video, rendering, dan desain grafis dengan performa tinggi.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i7-14700K"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 4070"
+      },
+      {
+        "label": "RAM",
+        "value": "64GB DDR5"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "2TB NVMe SSD"
+      },
+      {
+        "label": "PSU",
+        "value": "1000W 80+ Platinum"
+      }
+    ],
+    "stock": 5
+  },
+  {
+    "slug": "laptop-msi-thin-15",
+    "name": "MSI Thin 15",
+    "brand": "MSI",
+    "category": "laptop",
+    "subcategory": "Workstation Laptop",
+    "price": 13499000,
+    "image": "/products/laptop-gaming.png",
+    "rating": 4.7,
+    "sold": 98,
+    "shortDesc": "Laptop tipis dengan performa seimbang untuk kerja, belajar, dan hiburan harian.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i5-12450H"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Iris Xe"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6 inch FHD"
+      }
+    ],
+    "stock": 9
+  },
+  {
+    "slug": "motherboard-asus-prime-b760m-a",
+    "name": "ASUS PRIME B760M-A",
+    "brand": "Asus",
+    "category": "komponen",
+    "subcategory": "Motherboard",
+    "price": 2399000,
+    "image": "/products/cpu.png",
+    "rating": 4.7,
+    "sold": 61,
+    "shortDesc": "Motherboard mATX dengan dukungan Intel 12th/13th Gen dan fitur konektivitas lengkap.",
+    "specs": [
+      {
+        "label": "Socket",
+        "value": "LGA1700"
+      },
+      {
+        "label": "Chipset",
+        "value": "Intel B760"
+      },
+      {
+        "label": "Slot RAM",
+        "value": "2x DDR5"
+      },
+      {
+        "label": "Storage",
+        "value": "2x M.2"
+      },
+      {
+        "label": "USB",
+        "value": "USB 3.2 Gen 2"
+      }
+    ],
+    "stock": 11
+  },
+  {
+    "slug": "speaker-logitech-z200",
+    "name": "Logitech Z200 Speaker",
+    "brand": "Logitech",
+    "category": "aksesoris",
+    "subcategory": "Speaker",
+    "price": 699000,
+    "image": "/products/monitor.png",
+    "rating": 4.6,
+    "sold": 85,
+    "shortDesc": "Speaker desktop dengan suara jelas, bass yang cukup, dan desain simpel untuk ruang kerja.",
+    "specs": [
+      {
+        "label": "Output",
+        "value": "2.0 Channel"
+      },
+      {
+        "label": "Koneksi",
+        "value": "3.5mm / USB"
+      },
+      {
+        "label": "Volume",
+        "value": "Kontrol knob"
+      },
+      {
+        "label": "Cocok untuk",
+        "value": "PC, laptop"
+      },
+      {
+        "label": "Warna",
+        "value": "Black"
+      }
+    ],
+    "stock": 14
+  },
+  {
+    "slug": "mini-pc-intel-nuc",
+    "name": "Intel NUC 11 Enthusiast",
+    "brand": "Intel",
+    "category": "pc",
+    "subcategory": "Mini PC",
+    "price": 12999000,
+    "image": "/products/pc-rakitan.png",
+    "rating": 4.7,
+    "sold": 42,
+    "shortDesc": "Mini PC compact dengan performa tinggi untuk gaming ringan, kerja, dan multimedia.",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i7"
+      },
+      {
+        "label": "GPU",
+        "value": "Intel Iris Xe"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB SSD"
+      },
+      {
+        "label": "Bentuk",
+        "value": "Mini PC"
+      }
+    ],
+    "stock": 6
+  },
+  {
+    "category": "pc",
+    "subcategory": "PC Gaming",
+    "brand": "Oniforge",
+    "price": 1,
+    "stock": 1,
+    "image": "/api/files/58a22db3-8dfc-4b20-86a8-93285a47313f-1783093170452.png",
+    "shortDesc": "tes",
+    "name": "tes",
+    "slug": "123123",
+    "oldPrice": 2,
+    "images": [
+      "/api/files/58a22db3-8dfc-4b20-86a8-93285a47313f-1783093170452.png"
+    ],
+    "specs": [
+      {
+        "label": "ram",
+        "value": "tes"
+      }
+    ],
+    "variants": [
+      {
+        "label": "1",
+        "price": 22
+      },
+      {
+        "label": "2",
+        "price": 31
+      }
+    ],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "aksesoris",
+    "subcategory": "Headset",
+    "brand": "HyperX",
+    "price": 123,
+    "stock": 33,
+    "image": "/api/files/untitled-31-1783111291665.png",
+    "shortDesc": "ewww",
+    "images": [
+      "/api/files/untitled-31-1783111291665.png"
+    ],
+    "oldPrice": 321,
+    "name": "teso",
+    "slug": "333",
+    "specs": [
+      {
+        "label": "ah",
+        "value": "ahaha"
+      }
+    ],
+    "variants": [
+      {
+        "label": "3",
+        "price": 222
+      }
+    ],
+    "rating": 5,
+    "sold": 0
+  }
+]

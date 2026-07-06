@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1782109735090,
+    "createdAt": "2026-06-22T06:28:55.090Z",
+    "status": "completed",
+    "name": "test",
+    "address": "test test",
+    "phone": "08123123132",
+    "items": [
+      {
+        "slug": "laptop-gaming-titan-15",
+        "name": "Laptop Gaming Titan 15",
+        "price": 18999000,
+        "qty": 1,
+        "variant": null
+      }
+    ],
+    "total": 18999000,
+    "completedAt": "2026-06-22T08:44:49.556Z"
+  }
+]
