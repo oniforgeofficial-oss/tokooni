@@ -62,11 +62,11 @@ export default async function ProductDetailPage({
         <span className="truncate text-foreground min-w-0">{product.name}</span>
       </nav>
 
-      {/* 3-column layout */}
-      <div className="grid gap-6 lg:grid-cols-[380px_1fr_300px] lg:gap-8 xl:grid-cols-[420px_1fr_320px]">
+      {/* 3-column layout: sticky left gallery + scrollable middle + sticky right panel */}
+      <div className="grid gap-6 lg:grid-cols-[380px_1fr_300px] lg:gap-8 xl:grid-cols-[420px_1fr_320px] lg:items-start">
 
-        {/* ── LEFT: Image Gallery ── */}
-        <div className="lg:self-start lg:sticky lg:top-20">
+        {/* ── LEFT: Image Gallery — sticky ── */}
+        <div className="lg:sticky lg:top-20">
           <ProductGallery
             images={product.images?.length ? product.images : [product.image]}
             name={product.name}
@@ -140,7 +140,7 @@ export default async function ProductDetailPage({
         </div>
 
         {/* ── RIGHT: Sticky Purchase Panel ── */}
-        <div className="hidden lg:block lg:self-start lg:sticky lg:top-20">
+        <div className="hidden lg:block lg:sticky lg:top-20">
           <div className="rounded-2xl border bg-card p-5 shadow-sm flex flex-col gap-4">
             {/* Price */}
             <div>
