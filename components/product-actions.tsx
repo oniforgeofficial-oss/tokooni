@@ -116,6 +116,38 @@ export function ProductActions({ product }: { product: Product }) {
           Tambah ke Keranjang
         </Button>
       </div>
+
+      {/* Mobile Sticky Bottom Action Bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-t border-border/80 shadow-[0_-6px_20px_rgba(0,0,0,0.06)] px-4 py-3 flex items-center justify-between gap-3 lg:hidden pb-[calc(env(safe-area-inset-bottom)+10px)]">
+        <div className="flex flex-col min-w-0">
+          <span className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Total Harga</span>
+          <span className="text-base font-bold text-primary truncate">
+            {formatRupiah(activePrice * qty)}
+          </span>
+          {qty > 1 && (
+            <span className="text-[10px] text-muted-foreground">
+              {qty}x @{formatRupiah(activePrice)}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <Button
+            variant="outline"
+            className="h-10 px-3 font-semibold border-border/80"
+            onClick={handleAddToCart}
+            title="Tambah ke Keranjang"
+          >
+            <ShoppingCart className="size-4" />
+          </Button>
+          <Button
+            className="h-10 px-6 font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm"
+            onClick={handleBuyNow}
+          >
+            <Zap className="size-4 mr-1.5" />
+            Beli Sekarang
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

@@ -52,7 +52,7 @@ export default async function ProductDetailPage({
     : 0
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10 pb-24 lg:pb-10">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-1 text-sm text-muted-foreground overflow-hidden mb-6">
         <Link href="/" className="hover:text-foreground shrink-0">Beranda</Link>
