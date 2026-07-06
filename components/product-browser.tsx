@@ -9,9 +9,10 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
-type SortKey = "populer" | "termurah" | "termahal"
+type SortKey = "terbaru" | "populer" | "termurah" | "termahal"
 
 const sortOptions: { id: SortKey; label: string }[] = [
+  { id: "terbaru", label: "Paling Terbaru" },
   { id: "populer", label: "Terpopuler" },
   { id: "termurah", label: "Harga Terendah" },
   { id: "termahal", label: "Harga Tertinggi" },
@@ -33,7 +34,7 @@ export function ProductBrowser({
   const [activeSubcategory, setActiveSubcategory] = useState<string>("semua")
   const [activeBrand, setActiveBrand] = useState<string>("semua")
   const [query, setQuery] = useState(initialQuery)
-  const [sort, setSort] = useState<SortKey>("populer")
+  const [sort, setSort] = useState<SortKey>("terbaru")
   const [page, setPage] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -90,6 +91,8 @@ export function ProductBrowser({
     list = [...list].sort((a, b) => {
       if (sort === "termurah") return a.price - b.price
       if (sort === "termahal") return b.price - a.price
+      if (sort === "terbaru") return products.indexOf(b) - products.indexOf(a)
+      // default: populer (berdasarkan sold)
       return b.sold - a.sold
     })
     return list

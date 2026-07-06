@@ -253,111 +253,6 @@
     "stock": 12
   },
   {
-    "slug": "ram-corsair-vengeance-32gb",
-    "name": "RAM Corsair Vengeance 32GB",
-    "brand": "Corsair",
-    "category": "komponen",
-    "subcategory": "RAM",
-    "price": 1599000,
-    "image": "/products/efset-1782190635697.png",
-    "rating": 4.7,
-    "sold": 64,
-    "shortDesc": "Kit RAM DDR5 32GB untuk gaming dan produktivitas dengan latensi rendah.",
-    "specs": [
-      {
-        "label": "Kapasitas",
-        "value": "32GB (2x16GB)"
-      },
-      {
-        "label": "Tipe",
-        "value": "DDR5 6000MHz"
-      },
-      {
-        "label": "CAS Latency",
-        "value": "CL36"
-      },
-      {
-        "label": "Tegangan",
-        "value": "1.25V"
-      },
-      {
-        "label": "RGB",
-        "value": "Ya"
-      }
-    ],
-    "stock": 14
-  },
-  {
-    "slug": "ssd-samsung-980-pro-1tb",
-    "name": "SSD Samsung 980 Pro 1TB",
-    "brand": "Samsung",
-    "category": "komponen",
-    "subcategory": "Storage",
-    "price": 1899000,
-    "image": "/products/efset-1782190635697.png",
-    "rating": 4.8,
-    "sold": 92,
-    "shortDesc": "SSD NVMe M.2 1TB untuk sistem boot dan game cepat.",
-    "specs": [
-      {
-        "label": "Kapasitas",
-        "value": "1TB"
-      },
-      {
-        "label": "Tipe",
-        "value": "NVMe M.2 2280"
-      },
-      {
-        "label": "Kecepatan Baca",
-        "value": "7000 MB/s"
-      },
-      {
-        "label": "Kecepatan Tulis",
-        "value": "5100 MB/s"
-      },
-      {
-        "label": "Warranty",
-        "value": "5 tahun"
-      }
-    ],
-    "stock": 21
-  },
-  {
-    "slug": "cooler-master-hyper-212",
-    "name": "Cooler Master Hyper 212",
-    "brand": "Cooler Master",
-    "category": "komponen",
-    "subcategory": "Cooling",
-    "price": 399000,
-    "image": "/products/cpu.png",
-    "rating": 4.6,
-    "sold": 58,
-    "shortDesc": "Pendingin CPU tower hemat biaya dengan kipas 120mm dan heatpipe ganda.",
-    "specs": [
-      {
-        "label": "Tipe",
-        "value": "Air Cooler"
-      },
-      {
-        "label": "Fan",
-        "value": "120mm PWM"
-      },
-      {
-        "label": "Heatpipe",
-        "value": "4 Heatpipes"
-      },
-      {
-        "label": "Kompatibilitas",
-        "value": "Intel / AMD"
-      },
-      {
-        "label": "Garansi",
-        "value": "3 tahun"
-      }
-    ],
-    "stock": 26
-  },
-  {
     "slug": "mouse-redragon-m910",
     "name": "Redragon M910 Ranger",
     "brand": "Redragon",
@@ -673,64 +568,104 @@
     "stock": 6
   },
   {
-    "category": "pc",
-    "subcategory": "PC Gaming",
-    "brand": "Oniforge",
-    "price": 1,
+    "category": "komponen",
+    "subcategory": "VGA",
+    "brand": "MSI",
+    "price": 3599000,
     "stock": 1,
-    "image": "/api/files/58a22db3-8dfc-4b20-86a8-93285a47313f-1783093170452.png",
-    "shortDesc": "tes",
-    "name": "tes",
-    "slug": "123123",
-    "oldPrice": 2,
+    "image": "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-0-1783302040847.png",
+    "shortDesc": "✅ Fungsi tested\n✅ Kondisi 2nd mulus terawat\n✅ Suhu normal bukan pemarah \n✅ Unit only \n✅ Garansi Resmi off\n\n",
+    "name": "GeForce RTX 3060 VENTUS 2X 12G OC",
+    "slug": "VEN30602X12G",
     "images": [
-      "/api/files/58a22db3-8dfc-4b20-86a8-93285a47313f-1783093170452.png"
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-0-1783302040847.png",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-1-1783302040937.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-2-1783302040956.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-3-1783302040973.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-4-1783302040991.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-5-1783302041008.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-6-1783302041024.jpeg"
     ],
+    "oldPrice": 3750000,
     "specs": [
       {
-        "label": "ram",
-        "value": "tes"
-      }
-    ],
-    "variants": [
-      {
-        "label": "1",
-        "price": 22
+        "label": "VRAM",
+        "value": "12GB GDDR6"
       },
       {
-        "label": "2",
-        "price": 31
+        "label": "Memory Bus",
+        "value": "192-bit"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "hingga 1807 MHz"
+      },
+      {
+        "label": "Output",
+        "value": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+      },
+      {
+        "label": "Pendingin",
+        "value": "Dual Fan MSI TORX Fan 3.0"
+      },
+      {
+        "label": "Rekomendasi PSU",
+        "value": "Minimal 550W."
       }
     ],
     "rating": 5,
     "sold": 0
   },
   {
-    "category": "aksesoris",
-    "subcategory": "Headset",
-    "brand": "HyperX",
-    "price": 123,
-    "stock": 33,
-    "image": "/api/files/untitled-31-1783111291665.png",
-    "shortDesc": "ewww",
+    "category": "komponen",
+    "subcategory": "VGA",
+    "brand": "NVIDIA",
+    "price": 5399000,
+    "stock": 1,
+    "image": "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-0-1783302477166.jpg",
+    "shortDesc": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V merupakan VGA gaming berbasis arsitektur NVIDIA Ada Lovelace dengan VRAM GDDR6 8GB. Mengusung desain putih premium dengan efek holographic RGB, sistem pendingin triple fan, serta fitur One-Key Overclock yang memungkinkan peningkatan performa hanya dengan menekan tombol pada bracket. Sangat cocok untuk gaming 1080p Ultra hingga 1440p High, content creation, editing video, dan live streaming. Mendukung DLSS 3, Ray Tracing generasi terbaru, AV1 Encoder, dan konsumsi daya yang efisien sekitar 115 sampai 130W.",
+    "name": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V",
+    "oldPrice": 5600000,
     "images": [
-      "/api/files/untitled-31-1783111291665.png"
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-0-1783302477166.jpg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-1-1783302477200.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-2-1783302477266.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-3-1783302477279.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-4-1783302477295.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-5-1783302477313.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-6-1783302477327.jpeg"
     ],
-    "oldPrice": 321,
-    "name": "teso",
-    "slug": "333",
     "specs": [
       {
-        "label": "ah",
-        "value": "ahaha"
-      }
-    ],
-    "variants": [
+        "label": "VRAM",
+        "value": "8GB GDDR6"
+      },
       {
-        "label": "3",
-        "price": 222
+        "label": "Memory Bus",
+        "value": "128-bit"
+      },
+      {
+        "label": "CUDA Cores",
+        "value": "3.072"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "hingga sekitar 2.580 MHz"
+      },
+      {
+        "label": "Output",
+        "value": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+      },
+      {
+        "label": "Power Connector",
+        "value": "1x 8-pin"
+      },
+      {
+        "label": "Fitur",
+        "value": "DLSS 3, Ray Tracing, AV1 Encoder, One-Key OC, RGB Lighting."
       }
     ],
+    "slug": "RTX4060UltraWOC8GB-V",
     "rating": 5,
     "sold": 0
   }

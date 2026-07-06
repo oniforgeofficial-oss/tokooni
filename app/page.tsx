@@ -86,15 +86,20 @@ export default async function HomePage() {
               {bannerSettings.description || bannerProduct?.shortDesc || "Performa maksimal dengan harga bersahabat."}
             </p>
             {bannerProduct && (
-              <div className="mt-6 flex items-baseline gap-3">
-                <span className="text-3xl font-extrabold text-primary">
-                  {formatRupiah(bannerProduct.price)}
-                </span>
-                {bannerProduct.oldPrice && (
-                  <span className="text-lg text-muted-foreground line-through decoration-red-500/50">
-                    {formatRupiah(bannerProduct.oldPrice)}
+              <div className="mt-8 flex flex-col gap-1">
+                <p className="text-base font-bold text-foreground/90">
+                  {bannerProduct.name}
+                </p>
+                <div className="flex items-baseline gap-3">
+                  <span className="text-3xl font-extrabold text-primary">
+                    {formatRupiah(bannerProduct.price)}
                   </span>
-                )}
+                  {bannerProduct.oldPrice && (
+                    <span className="text-lg text-muted-foreground line-through decoration-red-500/50">
+                      {formatRupiah(bannerProduct.oldPrice)}
+                    </span>
+                  )}
+                </div>
               </div>
             )}
             <div className="mt-6 flex flex-col xs:flex-row flex-wrap gap-3">

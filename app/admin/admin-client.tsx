@@ -748,7 +748,23 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
             <form onSubmit={handleSave} className="flex flex-col gap-4">
               <div>
                 <label className="mb-1 block text-sm font-medium">Nama Produk</label>
-                <Input required value={formData.name || ""} onChange={e => setFormData({ ...formData, name: e.target.value })} />
+                <Input 
+                  required 
+                  value={formData.name || ""} 
+                  onChange={e => {
+                    const newName = e.target.value;
+                    if (!isEditing) {
+                      // Generate slug otomatis dari nama, hapus karakter aneh dan spasi jadi strip
+                      const autoSlug = newName
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/(^-|-$)+/g, '');
+                      setFormData({ ...formData, name: newName, slug: autoSlug });
+                    } else {
+                      setFormData({ ...formData, name: newName });
+                    }
+                  }} 
+                />
               </div>
               {!isEditing && (
                 <div>
