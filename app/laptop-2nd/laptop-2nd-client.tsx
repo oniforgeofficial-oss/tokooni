@@ -77,7 +77,7 @@ export function Laptop2ndClient({ products }: Laptop2ndClientProps) {
   const [search, setSearch] = useState("")
   const [selectedBrand, setSelectedBrand] = useState<string>("Semua")
   const [selectedGrade, setSelectedGrade] = useState<string>("Semua")
-  const [sortBy, setSortBy] = useState<string>("terlaris")
+  const [sortBy, setSortBy] = useState<string>("terbaru")
   const [showFilters, setShowFilters] = useState(false)
 
   const brands = useMemo(() => {
@@ -99,7 +99,8 @@ export function Laptop2ndClient({ products }: Laptop2ndClientProps) {
     if (selectedGrade !== "Semua") {
       result = result.filter((p) => p.grade === selectedGrade)
     }
-    if (sortBy === "terlaris") result.sort((a, b) => b.sold - a.sold)
+    if (sortBy === "terbaru") result.reverse()
+    else if (sortBy === "terlaris") result.sort((a, b) => b.sold - a.sold)
     else if (sortBy === "termurah") result.sort((a, b) => a.price - b.price)
     else if (sortBy === "termahal") result.sort((a, b) => b.price - a.price)
     else if (sortBy === "rating") result.sort((a, b) => b.rating - a.rating)
@@ -303,6 +304,7 @@ export function Laptop2ndClient({ products }: Laptop2ndClientProps) {
                     onChange={(e) => setSortBy(e.target.value)}
                     className="w-full appearance-none rounded-lg border border-border/50 bg-muted px-3 py-2 pr-8 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
                   >
+                    <option value="terbaru">Terbaru</option>
                     <option value="terlaris">Terlaris</option>
                     <option value="termurah">Termurah</option>
                     <option value="termahal">Termahal</option>
@@ -385,6 +387,7 @@ export function Laptop2ndClient({ products }: Laptop2ndClientProps) {
                   <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">Urutkan</p>
                   <div className="flex gap-2 flex-wrap">
                     {[
+                      { val: "terbaru", label: "Terbaru" },
                       { val: "terlaris", label: "Terlaris" },
                       { val: "termurah", label: "Termurah" },
                       { val: "termahal", label: "Termahal" },
