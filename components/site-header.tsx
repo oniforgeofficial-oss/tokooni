@@ -51,7 +51,19 @@ export function SiteHeader() {
             <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
             Laptop bekas
           </Link>
-          
+          <Link
+            href="/custom-pc"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
+          >
+            Galeri Custom PC
+          </Link>
+          <Link
+            href="/tentang-kami"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
+          >
+            Tentang Kami
+          </Link>
+
           <div className="relative group whitespace-nowrap">
             <button
               className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus:outline-none whitespace-nowrap"
@@ -87,30 +99,18 @@ export function SiteHeader() {
               </Link>
             </div>
           </div>
+        </nav>
 
-          <Link
-            href="/tentang-kami"
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
-          >
-            Tentang Kami
-          </Link>
-          <Link
-            href="/custom-pc"
-            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground whitespace-nowrap"
-          >
-            Galeri Custom PC
-          </Link>
+        <div className="ml-auto flex items-center gap-2">
+          {/* Request Custom PC — CTA Button (desktop) */}
           <a
             href={WA_CUSTOM_PC}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 whitespace-nowrap"
+            className="hidden lg:inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 whitespace-nowrap"
           >
             Request Custom PC
           </a>
-        </nav>
-
-        <div className="ml-auto flex items-center gap-2">
           {/* Desktop Search Input */}
           <form onSubmit={handleSearchSubmit} className="hidden sm:block relative w-48 md:w-64">
             <input
@@ -198,7 +198,21 @@ export function SiteHeader() {
               <span className="size-2 rounded-full bg-emerald-500" />
               Laptop bekas
             </Link>
-            
+            <Link
+              href="/custom-pc"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
+            >
+              Galeri Custom PC
+            </Link>
+            <Link
+              href="/tentang-kami"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
+            >
+              Tentang Kami
+            </Link>
+
             <div className="border-t border-border/40 my-1.5 pt-1.5">
               <span className="px-3 py-1 text-[10px] font-bold text-muted-foreground/50 uppercase tracking-wider block">
                 Bantuan &amp; Info
@@ -233,26 +247,12 @@ export function SiteHeader() {
               </Link>
             </div>
 
-            <Link
-              href="/tentang-kami"
-              onClick={() => setMobileOpen(false)}
-              className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
-            >
-              Tentang Kami
-            </Link>
-            <Link
-              href="/custom-pc"
-              onClick={() => setMobileOpen(false)}
-              className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
-            >
-              Galeri Custom PC
-            </Link>
             <a
               href={WA_CUSTOM_PC}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="rounded-md px-3 py-2.5 text-sm font-bold text-primary hover:bg-primary/10"
+              className="mt-1 flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:bg-primary/90"
             >
               Request Custom PC
             </a>
