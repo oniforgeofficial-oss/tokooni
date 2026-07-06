@@ -383,9 +383,11 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
     }
   }
 
-  const handleLogout = () => {
-    document.cookie = "admin_auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+
+  const handleLogout = async () => {
+    await fetch("/api/admin-logout", { method: "POST" })
     router.push("/")
+    router.refresh()
   }
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
