@@ -66,11 +66,7 @@ export function SiteFooter() {
                   Hubungi Kami
                 </Link>
               </li>
-              <li>
-                <Link href="/admin" className="hover:text-primary text-primary/80 font-medium">
-                  Login Karyawan
-                </Link>
-              </li>
+
             </ul>
           </div>
 

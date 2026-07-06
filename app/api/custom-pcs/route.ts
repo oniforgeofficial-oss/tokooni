@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
+import { revalidatePath } from "next/cache"
 import { getCustomPCs, saveCustomPCs } from "@/lib/api-custom-pcs"
+
+export const dynamic = "force-dynamic"
 
 export async function GET() {
   const pcs = await getCustomPCs()
@@ -12,6 +15,7 @@ export async function POST(request: Request) {
     const success = await saveCustomPCs(newPcs)
 
     if (success) {
+      revalidatePath("/custom-pc")
       return NextResponse.json({ success: true })
     } else {
       return NextResponse.json({ error: "Failed to save" }, { status: 500 })
