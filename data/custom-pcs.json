@@ -1,0 +1,19 @@
+[
+  {
+    "id": "pc-1783305367371",
+    "title": "Sunforge",
+    "customer": "Josh Eph",
+    "description": "Build ini kelihatan bersih, premium, dan bertema oranye-hitam. Aura ROG-nya cukup kuat walaupun tidak semua komponennya ROG",
+    "specs": "CPU\tRyzen 7 7700 / 7800X3D\nCooler\tSogdeep LCD 360 AIO\nMotherboard\tASUS ROG Strix B650E-F Gaming WiFi\nRAM\tXPG RGB DDR5 32GB–64GB\nVGA\tASUS TUF GeForce RTX 4070 / 4070 SUPER\nStorage\tNVMe Gen4 1TB\nPSU\t750–850W 80+ Gold\nFan\t10× ARGB\nCasing\tMVKT panoramic dual chamber",
+    "image": "/api/files/710573484_924991893881170_7716132184654237727_n-1783305337167.jpg",
+    "images": [
+      "/api/files/710573484_924991893881170_7716132184654237727_n-1783305337167.jpg",
+      "/api/files/710831309_924991703881189_7091095691159070917_n-1783305337182.jpg",
+      "/api/files/711729727_924991647214528_1653766853574320138_n-1783305337195.jpg",
+      "/api/files/712411321_924991820547844_1585344966636445538_n-1783305337211.jpg",
+      "/api/files/712686269_924991937214499_5751268707561754170_n-1783305337227.jpg",
+      "/api/files/713624494_924991757214517_1819160944544302603_n-1783305337250.jpg"
+    ],
+    "createdAt": "2026-07-06T02:36:07.372Z"
+  }
+]

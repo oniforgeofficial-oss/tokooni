@@ -18,7 +18,7 @@ import {
 import { Separator } from "@/components/ui/separator"
 
 export function CartSheet({ trigger }: { trigger: React.ReactElement }) {
-  const { items, count, subtotal, updateQty, removeItem } = useCart()
+  const { items, count, subtotal, updateQty, removeItem, clear } = useCart()
   const [open, setOpen] = useState(false)
 
   return (

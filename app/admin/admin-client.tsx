@@ -4,12 +4,13 @@ import { useRouter } from "next/navigation"
 import Image from "next/image"
 import {
   Plus, Edit, Trash2, ShoppingBag, Package, CheckCircle2,
-  Clock, XCircle, AlertCircle, RefreshCw, Phone, MapPin, User, Calendar, Download, Sparkles
+  Clock, XCircle, AlertCircle, RefreshCw, Phone, MapPin, User, Calendar, Download, Sparkles, Image as ImageIcon
 } from "lucide-react"
 import type { Product, Category, ProductVariant } from "@/lib/products"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatRupiah, categories, subcategories, brandMap } from "@/lib/products"
+import { CustomPcTab } from "./custom-pc-tab"
 
 // ─── Order types ────────────────────────────────────────────────────
 type OrderStatus = "pending" | "confirmed" | "completed" | "cancelled"
@@ -322,7 +323,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const [isEditing, setIsEditing] = useState<Product | null>(null)
   const [isAdding, setIsAdding] = useState(false)
   const [formData, setFormData] = useState<Partial<Product>>({})
-  const [activeTab, setActiveTab] = useState<"products" | "orders" | "banner">("products")
+  const [activeTab, setActiveTab] = useState<"products" | "orders" | "banner" | "custom-pcs">("products")
   const [isUploading, setIsUploading] = useState(false)
   const [itemToDelete, setItemToDelete] = useState<Product | null>(null)
   const router = useRouter()
@@ -563,6 +564,17 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
           <Sparkles className="size-4" />
           Banner Hero
         </button>
+        <button
+          onClick={() => setActiveTab("custom-pcs")}
+          className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
+            activeTab === "custom-pcs"
+              ? "border-primary text-primary"
+              : "border-transparent text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <ImageIcon className="size-4" />
+          Galeri Custom PC
+        </button>
       </div>
 
       {/* ── Products Tab ── */}
@@ -619,6 +631,9 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
 
       {/* ── Orders Tab ── */}
       {activeTab === "orders" && <OrdersTab />}
+
+      {/* ── Custom PC Tab ── */}
+      {activeTab === "custom-pcs" && <CustomPcTab />}
 
       {/* ── Banner Tab ── */}
       {activeTab === "banner" && (

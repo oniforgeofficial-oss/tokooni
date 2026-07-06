@@ -87,6 +87,12 @@ export function SiteHeader() {
           >
             Tentang Kami
           </Link>
+          <Link
+            href="/custom-pc"
+            className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            Galeri Custom PC
+          </Link>
           <a
             href={WA_CUSTOM_PC}
             target="_blank"
@@ -218,6 +224,13 @@ export function SiteHeader() {
               className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
             >
               Tentang Kami
+            </Link>
+            <Link
+              href="/custom-pc"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
+            >
+              Galeri Custom PC
             </Link>
             <a
               href={WA_CUSTOM_PC}
