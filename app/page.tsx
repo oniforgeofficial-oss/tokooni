@@ -63,7 +63,8 @@ export default async function HomePage() {
   const bannerProduct = products.find(p => p.slug === bannerSettings.productSlug) || products[0]
 
   const featured = products.slice(0, 4)
-  const recommended = products.slice(4)
+  const newest = [...products].reverse().slice(0, 4)
+  const recommended = products.slice(4, 12) // Batasi 8 agar tidak terlalu panjang
 
   return (
     <div>
@@ -254,6 +255,27 @@ export default async function HomePage() {
         </div>
         <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {featured.map((p) => (
+            <ProductCard key={p.slug} product={p} />
+          ))}
+        </div>
+      </section>
+
+      {/* Newest */}
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+        <div className="flex items-end justify-between">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            Produk Terbaru
+          </h2>
+          <Link
+            href="/produk?sort=terbaru"
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            Lihat semua
+            <ArrowRight className="size-4" />
+          </Link>
+        </div>
+        <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {newest.map((p) => (
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>

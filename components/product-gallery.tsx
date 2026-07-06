@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, MouseEvent } from "react"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 
@@ -14,20 +14,42 @@ export function ProductGallery({
   badge?: string 
 }) {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isZoomed, setIsZoomed] = useState(false)
+  const [position, setPosition] = useState({ x: 50, y: 50 })
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!isZoomed) return
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect()
+    const x = ((e.clientX - left) / width) * 100
+    const y = ((e.clientY - top) / height) * 100
+    setPosition({ x, y })
+  }
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="relative aspect-square overflow-hidden rounded-2xl border bg-secondary">
+      <div 
+        className="relative aspect-square overflow-hidden rounded-2xl border bg-white cursor-crosshair"
+        onMouseEnter={() => setIsZoomed(true)}
+        onMouseLeave={() => {
+          setIsZoomed(false)
+          setPosition({ x: 50, y: 50 })
+        }}
+        onMouseMove={handleMouseMove}
+      >
         <Image
           src={images[activeIndex] || "/placeholder.svg"}
           alt={name}
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-contain p-8"
+          className="object-contain transition-transform duration-200 ease-out"
+          style={{
+            transformOrigin: `${position.x}% ${position.y}%`,
+            transform: isZoomed ? "scale(2)" : "scale(1)"
+          }}
         />
         {badge && (
-          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">
+          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground z-10 pointer-events-none">
             {badge}
           </Badge>
         )}
