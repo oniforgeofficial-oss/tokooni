@@ -897,8 +897,9 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                 </div>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium">Deskripsi Singkat</label>
-                <textarea required value={formData.shortDesc || ""} onChange={e => setFormData({ ...formData, shortDesc: e.target.value })} className="w-full min-h-20 rounded-md border bg-background px-3 py-2 text-sm outline-none" />
+                <label className="mb-1 block text-sm font-medium">Deskripsi Lengkap</label>
+                <p className="mb-1.5 text-xs text-muted-foreground">Tulis deskripsi detail produk. Tekan Enter untuk baris baru. Bisa pakai emoji seperti ✅ 📦 ✨</p>
+                <textarea value={formData.condition || ""} onChange={e => setFormData({ ...formData, condition: e.target.value })} rows={10} placeholder={"Contoh:\nLaptop bisnis premium kondisi mulus.\n\nSpesifikasi:\n✅ Intel Core i5 Gen 12\n✅ RAM 16GB DDR4\n✅ SSD 512GB\n\nKondisi:\n✓ Body mulus\n✓ Layar jernih\n\nKelengkapan:\n📦 Laptop + Charger"} className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary" />
               </div>
 
               {/* === SPESIFIKASI PRODUK === */}

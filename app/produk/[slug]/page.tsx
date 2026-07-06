@@ -105,9 +105,7 @@ export default async function ProductDetailPage({
             {discount > 0 && <Badge variant="destructive">-{discount}%</Badge>}
           </div>
 
-          <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
-            {product.shortDesc}
-          </p>
+
 
           <ProductActions product={product} />
 
@@ -127,6 +125,16 @@ export default async function ProductDetailPage({
               ))}
             </dl>
           </div>
+
+          {/* Deskripsi Lengkap */}
+          {product.condition && (
+            <div className="mt-8">
+              <h2 className="text-lg font-semibold mb-3">Deskripsi</h2>
+              <div className="rounded-xl border bg-card p-4 text-sm leading-relaxed whitespace-pre-line text-muted-foreground">
+                {product.condition}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
