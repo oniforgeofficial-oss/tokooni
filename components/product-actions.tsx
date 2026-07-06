@@ -29,17 +29,15 @@ export function ProductActions({ product }: { product: Product }) {
 
   const handleBuyNow = () => {
     addItem(product, qty, selectedVariant ?? undefined)
-    // Navigate to checkout page to collect customer details
     router.push('/checkout')
   }
 
   return (
-    <div className="mt-6 flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
+      {/* Variant selector */}
       {hasVariants && (
         <div className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-foreground">
-            Pilih Varian
-          </span>
+          <span className="text-sm font-medium text-muted-foreground">Pilih Varian</span>
           <div className="flex flex-wrap gap-2">
             {product.variants!.map((v) => {
               const isActive = selectedVariant?.label === v.label
@@ -72,48 +70,50 @@ export function ProductActions({ product }: { product: Product }) {
         </div>
       )}
 
-      <div className="flex items-center gap-3">
+      {/* Quantity selector */}
+      <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Jumlah</span>
-        <div className="flex items-center rounded-md border">
+        <div className="flex items-center rounded-lg border overflow-hidden">
           <button
             type="button"
             aria-label="Kurangi jumlah"
             onClick={() => setQty((q) => Math.max(1, q - 1))}
-            className="flex size-10 items-center justify-center text-muted-foreground hover:text-foreground"
+            className="flex size-9 items-center justify-center text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
           >
-            <Minus className="size-4" />
+            <Minus className="size-3.5" />
           </button>
-          <span className="w-10 text-center font-medium tabular-nums">
+          <span className="w-12 text-center text-sm font-semibold tabular-nums border-x py-2">
             {qty}
           </span>
           <button
             type="button"
             aria-label="Tambah jumlah"
             onClick={() => setQty((q) => q + 1)}
-            className="flex size-10 items-center justify-center text-muted-foreground hover:text-foreground"
+            className="flex size-9 items-center justify-center text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
           >
-            <Plus className="size-4" />
+            <Plus className="size-3.5" />
           </button>
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
+      {/* Action buttons — always stacked, full width */}
+      <div className="flex flex-col gap-2.5">
         <Button
           size="lg"
-          variant="outline"
-          className="flex-1"
-          onClick={handleAddToCart}
-        >
-          <ShoppingCart className="size-4" />
-          Tambah ke Keranjang
-        </Button>
-        <Button
-          size="lg"
-          className="flex-1"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
           onClick={handleBuyNow}
         >
           <Zap className="size-4" />
           Beli Sekarang
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          className="w-full font-semibold"
+          onClick={handleAddToCart}
+        >
+          <ShoppingCart className="size-4" />
+          Tambah ke Keranjang
         </Button>
       </div>
     </div>
