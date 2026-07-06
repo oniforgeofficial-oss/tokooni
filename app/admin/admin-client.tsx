@@ -546,6 +546,17 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
           Produk
         </button>
         <button
+          onClick={() => setActiveTab("laptop-2nd")}
+          className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
+            activeTab === "laptop-2nd"
+              ? "border-primary text-primary"
+              : "border-transparent text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Laptop className="size-4" />
+          Laptop 2nd
+        </button>
+        <button
           onClick={() => setActiveTab("orders")}
           className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
             activeTab === "orders"
@@ -555,17 +566,6 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
         >
           <ShoppingBag className="size-4" />
           Pesanan
-        </button>
-        <button
-          onClick={() => setActiveTab("banner")}
-          className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
-            activeTab === "banner"
-              ? "border-primary text-primary"
-              : "border-transparent text-muted-foreground hover:text-foreground"
-          }`}
-        >
-          <Sparkles className="size-4" />
-          Banner Hero
         </button>
         <button
           onClick={() => setActiveTab("custom-pcs")}
@@ -579,15 +579,15 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
           Galeri Custom PC
         </button>
         <button
-          onClick={() => setActiveTab("laptop-2nd")}
+          onClick={() => setActiveTab("banner")}
           className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors ${
-            activeTab === "laptop-2nd"
+            activeTab === "banner"
               ? "border-primary text-primary"
               : "border-transparent text-muted-foreground hover:text-foreground"
           }`}
         >
-          <Laptop className="size-4" />
-          Laptop 2nd
+          <Sparkles className="size-4" />
+          Banner Hero
         </button>
       </div>
 
