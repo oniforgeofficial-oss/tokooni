@@ -688,12 +688,30 @@
     "batteryHealth": 87,
     "warranty2nd": "Garansi toko 3 bulan",
     "specs": [
-      { "label": "Prosesor", "value": "AMD Ryzen 7 5800H" },
-      { "label": "GPU", "value": "NVIDIA RTX 3060 6GB" },
-      { "label": "RAM", "value": "16GB DDR4" },
-      { "label": "Penyimpanan", "value": "512GB NVMe SSD" },
-      { "label": "Layar", "value": "15.6\" FHD 144Hz" },
-      { "label": "Kondisi Fisik", "value": "Mulus, tidak ada goresan" }
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 7 5800H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3060 6GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Mulus, tidak ada goresan"
+      }
     ]
   },
   {
@@ -715,12 +733,30 @@
     "batteryHealth": 82,
     "warranty2nd": "Garansi toko 3 bulan",
     "specs": [
-      { "label": "Prosesor", "value": "Intel Core i5-11400H" },
-      { "label": "GPU", "value": "NVIDIA RTX 3050 Ti 4GB" },
-      { "label": "RAM", "value": "16GB DDR4" },
-      { "label": "Penyimpanan", "value": "512GB NVMe SSD" },
-      { "label": "Layar", "value": "15.6\" FHD 165Hz" },
-      { "label": "Kondisi Fisik", "value": "Sedikit bekas di bawah, layar mulus" }
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i5-11400H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 Ti 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 165Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Sedikit bekas di bawah, layar mulus"
+      }
     ]
   },
   {
@@ -742,12 +778,30 @@
     "batteryHealth": 74,
     "warranty2nd": "Garansi toko 1 bulan",
     "specs": [
-      { "label": "Prosesor", "value": "Intel Core i7-11800H" },
-      { "label": "GPU", "value": "NVIDIA RTX 3060 6GB" },
-      { "label": "RAM", "value": "16GB DDR4" },
-      { "label": "Penyimpanan", "value": "512GB NVMe SSD" },
-      { "label": "Layar", "value": "15.6\" FHD 144Hz" },
-      { "label": "Kondisi Fisik", "value": "Goresan minor pada casing, layar oke" }
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i7-11800H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3060 6GB"
+      },
+      {
+        "label": "RAM",
+        "value": "16GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Goresan minor pada casing, layar oke"
+      }
     ]
   },
   {
@@ -769,12 +823,30 @@
     "batteryHealth": 91,
     "warranty2nd": "Garansi toko 3 bulan",
     "specs": [
-      { "label": "Prosesor", "value": "Intel Core i5-11400H" },
-      { "label": "GPU", "value": "NVIDIA RTX 3050 4GB" },
-      { "label": "RAM", "value": "8GB DDR4" },
-      { "label": "Penyimpanan", "value": "512GB NVMe SSD" },
-      { "label": "Layar", "value": "15.6\" FHD 144Hz" },
-      { "label": "Kondisi Fisik", "value": "Mulus, seperti baru" }
+      {
+        "label": "Prosesor",
+        "value": "Intel Core i5-11400H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "8GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "15.6\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Mulus, seperti baru"
+      }
     ]
   },
   {
@@ -796,12 +868,69 @@
     "batteryHealth": 70,
     "warranty2nd": "Garansi toko 1 bulan",
     "specs": [
-      { "label": "Prosesor", "value": "AMD Ryzen 5 5600H" },
-      { "label": "GPU", "value": "NVIDIA RTX 3050 4GB" },
-      { "label": "RAM", "value": "8GB DDR4" },
-      { "label": "Penyimpanan", "value": "512GB NVMe SSD" },
-      { "label": "Layar", "value": "16.1\" FHD 144Hz" },
-      { "label": "Kondisi Fisik", "value": "Bekas pemakaian ringan, layar bersih" }
+      {
+        "label": "Prosesor",
+        "value": "AMD Ryzen 5 5600H"
+      },
+      {
+        "label": "GPU",
+        "value": "NVIDIA RTX 3050 4GB"
+      },
+      {
+        "label": "RAM",
+        "value": "8GB DDR4"
+      },
+      {
+        "label": "Penyimpanan",
+        "value": "512GB NVMe SSD"
+      },
+      {
+        "label": "Layar",
+        "value": "16.1\" FHD 144Hz"
+      },
+      {
+        "label": "Kondisi Fisik",
+        "value": "Bekas pemakaian ringan, layar bersih"
+      }
     ]
+  },
+  {
+    "category": "laptop-2nd",
+    "grade": "A",
+    "batteryHealth": 95,
+    "condition": "Kondisi:\n\n✅ Body mulus, normal bekas pemakaian\n✅ Layar jernih, tidak ada dead pixel\n✅ Keyboard & touchpad normal\n✅ Semua fungsi 100% normal\n✅ Baterai masih normal\n✅ Siap langsung digunakan\n\nKelengkapan:\n\nLaptop Dell Latitude\nCharger Original Dell\n\nCocok untuk:\n\nKerja kantoran\nKuliah\nZoom/Google Meet\nMicrosoft Office\nDesain ringan (Canva, Photoshop)\nProgramming\nBrowsing & Multimedia\n\nKeunggulan:\n\nBuild quality premium khas Dell Latitude\nPerforma cepat berkat SSD NVMe\nRingan dan mudah dibawa\nKeyboard nyaman untuk mengetik lama\nCocok untuk penggunaan harian maupun profesional\n\n📦 Packing aman dan rapi\n🛒 Barang siap kirim",
+    "price": 5799000,
+    "stock": 1,
+    "brand": "Dell",
+    "name": "Dell Latitude - 5330",
+    "shortDesc": "Dell Latitude 5330 Core i5 Gen 12 | RAM 16GB | SSD NVMe 512GB | 13\" IPS | Mulus Like New\n\nKondisi:\n\n✅ Body mulus, normal bekas pemakaian\n✅ Layar jernih, tidak ada dead pixel\n✅ Keyboard & touchpad normal\n✅ Semua fungsi 100% normal\n✅ Baterai masih normal\n✅ Siap langsung digunakan\n\nKelengkapan:\n\nLaptop Dell Latitude\nCharger Original Dell\n\nCocok untuk:\n\nKerja kantoran\nKuliah\nZoom/Google Meet\nMicrosoft Office\nDesain ringan (Canva, Photoshop)\nProgramming\nBrowsing & Multimedia\n\nKeunggulan:\n\nBuild quality premium khas Dell Latitude\nPerforma cepat berkat SSD NVMe\nRingan dan mudah dibawa\nKeyboard nyaman untuk mengetik lama\nCocok untuk penggunaan harian maupun profesional\n\n📦 Packing aman dan rapi\n🛒 Barang siap kirim",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "i5 Gen 12"
+      },
+      {
+        "label": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "SSD NVMe 512GB"
+      },
+      {
+        "label": "Layar",
+        "value": "IPS 13'"
+      }
+    ],
+    "slug": "dell-latitude-5330",
+    "oldPrice": 13500000,
+    "image": "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1-1783332710286.jpeg",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1-1783332710286.jpeg",
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-2-1783332710310.jpeg",
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1783332710327.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0
   }
 ]

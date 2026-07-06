@@ -41,7 +41,12 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         )}
         <div className="absolute left-3 top-3 flex flex-col gap-1.5">
-          {!outOfStock && product.badge && (
+          {!outOfStock && product.grade && (
+            <Badge variant="secondary" className="bg-background/80 text-foreground backdrop-blur-sm">
+              Grade {product.grade}
+            </Badge>
+          )}
+          {!outOfStock && product.badge && !product.grade && (
             <Badge className="bg-primary text-primary-foreground">
               {product.badge}
             </Badge>
