@@ -1,578 +1,10 @@
 [
   {
-    "slug": "laptop-gaming-titan-15",
-    "name": "Laptop Gaming Titan 15",
-    "brand": "Oniforge",
-    "category": "laptop",
-    "subcategory": "Gaming Laptop",
-    "price": 18999000,
-    "oldPrice": 21499000,
-    "image": "/products/laptop-gaming.png",
-    "rating": 4.8,
-    "sold": 343,
-    "badge": "Terlaris",
-    "shortDesc": "Laptop gaming bertenaga dengan layar 15.6 inci 165Hz dan pendinginan ganda untuk performa maksimal.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "Intel Core i7-13700H"
-      },
-      {
-        "label": "GPU",
-        "value": "NVIDIA RTX 4060 8GB"
-      },
-      {
-        "label": "RAM",
-        "value": "16GB DDR5"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "1TB NVMe SSD"
-      },
-      {
-        "label": "Layar",
-        "value": "15.6\" QHD 165Hz"
-      }
-    ],
-    "stock": 0
-  },
-  {
-    "slug": "pc-rakitan-vortex-pro",
-    "name": "PC Rakitan Vortex Pro",
-    "brand": "Oniforge",
-    "category": "pc",
-    "subcategory": "PC Gaming",
-    "price": 24500000,
-    "image": "/products/pc-rakitan.png",
-    "rating": 4.9,
-    "sold": 128,
-    "badge": "Pilihan Editor",
-    "shortDesc": "Desktop gaming siap pakai dengan casing tempered glass dan lighting RGB yang memukau.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "AMD Ryzen 7 7800X3D"
-      },
-      {
-        "label": "GPU",
-        "value": "NVIDIA RTX 4070 Ti"
-      },
-      {
-        "label": "RAM",
-        "value": "32GB DDR5 6000MHz"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "2TB NVMe SSD"
-      },
-      {
-        "label": "PSU",
-        "value": "850W 80+ Gold"
-      }
-    ],
-    "stock": 10
-  },
-  {
-    "slug": "monitor-ultrawide-curve-34",
-    "name": "Monitor Ultrawide Curve 34",
-    "brand": "Pixel",
-    "category": "aksesoris",
-    "subcategory": "Monitor",
-    "price": 7299000,
-    "oldPrice": 8199000,
-    "image": "/products/monitor.png",
-    "rating": 4.7,
-    "sold": 256,
-    "shortDesc": "Monitor ultrawide melengkung 34 inci dengan refresh rate 144Hz untuk pengalaman imersif.",
-    "specs": [
-      {
-        "label": "Ukuran",
-        "value": "34\" Ultrawide"
-      },
-      {
-        "label": "Resolusi",
-        "value": "3440 x 1440"
-      },
-      {
-        "label": "Refresh Rate",
-        "value": "144Hz"
-      },
-      {
-        "label": "Panel",
-        "value": "VA Curved 1500R"
-      },
-      {
-        "label": "Port",
-        "value": "HDMI 2.1, DP 1.4"
-      }
-    ],
-    "stock": 15
-  },
-  {
-    "slug": "keyboard-mekanikal-rapid-tkl",
-    "name": "Keyboard Mekanikal Rapid TKL",
-    "brand": "Forge",
-    "category": "aksesoris",
-    "subcategory": "Keyboard",
-    "price": 1499000,
-    "image": "/products/keyboard.png",
-    "rating": 4.6,
-    "sold": 891,
-    "badge": "Terlaris",
-    "shortDesc": "Keyboard mekanikal TKL dengan switch hot-swap dan keycaps PBT premium.",
-    "specs": [
-      {
-        "label": "Layout",
-        "value": "Tenkeyless (TKL)"
-      },
-      {
-        "label": "Switch",
-        "value": "Linear Hot-swap"
-      },
-      {
-        "label": "Keycaps",
-        "value": "PBT Double-shot"
-      },
-      {
-        "label": "Koneksi",
-        "value": "USB-C / Bluetooth"
-      },
-      {
-        "label": "Backlight",
-        "value": "RGB Per-key"
-      }
-    ],
-    "stock": 25
-  },
-  {
-    "slug": "mouse-gaming-photon-x",
-    "name": "Mouse Gaming Photon X",
-    "brand": "Forge",
-    "category": "aksesoris",
-    "subcategory": "Mouse",
-    "price": 799000,
-    "oldPrice": 999000,
-    "image": "/products/mouse.png",
-    "rating": 4.7,
-    "sold": 1204,
-    "shortDesc": "Mouse gaming nirkabel super ringan dengan sensor 26K DPI dan latensi rendah.",
-    "specs": [
-      {
-        "label": "Sensor",
-        "value": "Optical 26.000 DPI"
-      },
-      {
-        "label": "Berat",
-        "value": "59 gram"
-      },
-      {
-        "label": "Koneksi",
-        "value": "2.4GHz Wireless"
-      },
-      {
-        "label": "Baterai",
-        "value": "Hingga 90 jam"
-      },
-      {
-        "label": "Polling Rate",
-        "value": "1000Hz"
-      }
-    ],
-    "stock": 30
-  },
-  {
-    "slug": "vga-rtx-4070-super",
-    "name": "VGA RTX 4070 Super",
-    "brand": "Pixel",
-    "category": "komponen",
-    "subcategory": "VGA",
-    "price": 11999000,
-    "image": "/products/gpu.png",
-    "rating": 4.9,
-    "sold": 76,
-    "badge": "Stok Terbatas",
-    "shortDesc": "Kartu grafis bertenaga untuk gaming 1440p dan kreator konten dengan triple fan cooling.",
-    "specs": [
-      {
-        "label": "Chipset",
-        "value": "NVIDIA RTX 4070 Super"
-      },
-      {
-        "label": "Memori",
-        "value": "12GB GDDR6X"
-      },
-      {
-        "label": "Boost Clock",
-        "value": "2.6 GHz"
-      },
-      {
-        "label": "Power",
-        "value": "220W"
-      },
-      {
-        "label": "Output",
-        "value": "3x DP, 1x HDMI"
-      }
-    ],
-    "stock": 8
-  },
-  {
-    "slug": "prosesor-ryzen-7-7800x3d",
-    "name": "Prosesor Ryzen 7 7800X3D",
-    "brand": "AMD",
-    "category": "komponen",
-    "subcategory": "Processor",
-    "price": 6499000,
-    "oldPrice": 7299000,
-    "image": "/products/cpu.png",
-    "rating": 4.9,
-    "sold": 184,
-    "shortDesc": "Prosesor gaming terbaik di kelasnya dengan teknologi 3D V-Cache.",
-    "specs": [
-      {
-        "label": "Core / Thread",
-        "value": "8 Core / 16 Thread"
-      },
-      {
-        "label": "Base Clock",
-        "value": "4.2 GHz"
-      },
-      {
-        "label": "Boost Clock",
-        "value": "5.0 GHz"
-      },
-      {
-        "label": "Cache",
-        "value": "96MB L3 3D V-Cache"
-      },
-      {
-        "label": "Socket",
-        "value": "AM5"
-      }
-    ],
-    "stock": 12
-  },
-  {
-    "slug": "mouse-redragon-m910",
-    "name": "Redragon M910 Ranger",
-    "brand": "Redragon",
-    "category": "aksesoris",
-    "subcategory": "Mouse",
-    "price": 211900,
-    "image": "https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/d838d7abf8a74252a82890cf6c1e5218~.jpeg.webp",
-    "rating": 4.8,
-    "sold": 168,
-    "shortDesc": "Mouse gaming wired dengan sensor presisi, desain ergonomis, dan RGB yang stylish.",
-    "specs": [
-      {
-        "label": "Sensor",
-        "value": "Optical 8000 DPI"
-      },
-      {
-        "label": "Koneksi",
-        "value": "USB Wired"
-      },
-      {
-        "label": "Tombol",
-        "value": "6 Tombol"
-      },
-      {
-        "label": "Berat",
-        "value": "85 gram"
-      },
-      {
-        "label": "RGB",
-        "value": "Ya"
-      }
-    ],
-    "stock": 22
-  },
-  {
-    "slug": "headset-gaming-sonic-7",
-    "name": "Headset Gaming Sonic 7",
-    "brand": "Forge",
-    "category": "aksesoris",
-    "subcategory": "Headset",
-    "price": 1299000,
-    "image": "/products/headset.png",
-    "rating": 4.5,
-    "sold": 533,
-    "shortDesc": "Headset gaming dengan surround 7.1 dan mikrofon noise-cancelling yang jernih.",
-    "specs": [
-      {
-        "label": "Driver",
-        "value": "50mm Neodymium"
-      },
-      {
-        "label": "Surround",
-        "value": "Virtual 7.1"
-      },
-      {
-        "label": "Mikrofon",
-        "value": "Detachable Noise-cancel"
-      },
-      {
-        "label": "Koneksi",
-        "value": "USB & 3.5mm"
-      },
-      {
-        "label": "Kompatibel",
-        "value": "PC, PS5, Switch"
-      }
-    ],
-    "stock": 18
-  },
-  {
-    "slug": "monitor-aoc-24g2sp",
-    "name": "AOC 24G2SP 24 inch",
-    "brand": "AOC",
-    "category": "aksesoris",
-    "subcategory": "Monitor",
-    "price": 1999000,
-    "image": "/products/monitor.png",
-    "rating": 4.7,
-    "sold": 111,
-    "shortDesc": "Monitor gaming 24 inch Full HD dengan refresh rate 144Hz dan panel Fast IPS.",
-    "specs": [
-      {
-        "label": "Ukuran",
-        "value": "24 inch"
-      },
-      {
-        "label": "Resolusi",
-        "value": "1920x1080"
-      },
-      {
-        "label": "Refresh Rate",
-        "value": "144Hz"
-      },
-      {
-        "label": "Panel",
-        "value": "Fast IPS"
-      },
-      {
-        "label": "Port",
-        "value": "HDMI, DisplayPort"
-      }
-    ],
-    "stock": 13
-  },
-  {
-    "slug": "laptop-asus-tuf-a15",
-    "name": "ASUS TUF Gaming A15",
-    "brand": "Asus",
-    "category": "laptop",
-    "subcategory": "Gaming Laptop",
-    "price": 14999000,
-    "image": "/products/laptop-gaming.png",
-    "rating": 4.8,
-    "sold": 210,
-    "shortDesc": "Laptop gaming 15.6 inch dengan Ryzen 7, RTX 4060, dan sistem pendingin TUF.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "AMD Ryzen 7 7435HS"
-      },
-      {
-        "label": "GPU",
-        "value": "NVIDIA RTX 4060"
-      },
-      {
-        "label": "RAM",
-        "value": "16GB DDR5"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "512GB SSD"
-      },
-      {
-        "label": "Layar",
-        "value": "144Hz"
-      }
-    ],
-    "stock": 7
-  },
-  {
-    "slug": "pc-workstation-creator-pro",
-    "name": "PC Workstation Creator Pro",
-    "brand": "Oniforge",
-    "category": "pc",
-    "subcategory": "PC Workstation",
-    "price": 28990000,
-    "image": "/products/pc-rakitan.png",
-    "rating": 4.8,
-    "sold": 74,
-    "shortDesc": "PC workstation untuk editing video, rendering, dan desain grafis dengan performa tinggi.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "Intel Core i7-14700K"
-      },
-      {
-        "label": "GPU",
-        "value": "NVIDIA RTX 4070"
-      },
-      {
-        "label": "RAM",
-        "value": "64GB DDR5"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "2TB NVMe SSD"
-      },
-      {
-        "label": "PSU",
-        "value": "1000W 80+ Platinum"
-      }
-    ],
-    "stock": 5
-  },
-  {
-    "slug": "laptop-msi-thin-15",
-    "name": "MSI Thin 15",
-    "brand": "MSI",
-    "category": "laptop",
-    "subcategory": "Workstation Laptop",
-    "price": 13499000,
-    "image": "/products/laptop-gaming.png",
-    "rating": 4.7,
-    "sold": 98,
-    "shortDesc": "Laptop tipis dengan performa seimbang untuk kerja, belajar, dan hiburan harian.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "Intel Core i5-12450H"
-      },
-      {
-        "label": "GPU",
-        "value": "Intel Iris Xe"
-      },
-      {
-        "label": "RAM",
-        "value": "16GB DDR4"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "512GB SSD"
-      },
-      {
-        "label": "Layar",
-        "value": "15.6 inch FHD"
-      }
-    ],
-    "stock": 9
-  },
-  {
-    "slug": "motherboard-asus-prime-b760m-a",
-    "name": "ASUS PRIME B760M-A",
-    "brand": "Asus",
-    "category": "komponen",
-    "subcategory": "Motherboard",
-    "price": 2399000,
-    "image": "/products/cpu.png",
-    "rating": 4.7,
-    "sold": 61,
-    "shortDesc": "Motherboard mATX dengan dukungan Intel 12th/13th Gen dan fitur konektivitas lengkap.",
-    "specs": [
-      {
-        "label": "Socket",
-        "value": "LGA1700"
-      },
-      {
-        "label": "Chipset",
-        "value": "Intel B760"
-      },
-      {
-        "label": "Slot RAM",
-        "value": "2x DDR5"
-      },
-      {
-        "label": "Storage",
-        "value": "2x M.2"
-      },
-      {
-        "label": "USB",
-        "value": "USB 3.2 Gen 2"
-      }
-    ],
-    "stock": 11
-  },
-  {
-    "slug": "speaker-logitech-z200",
-    "name": "Logitech Z200 Speaker",
-    "brand": "Logitech",
-    "category": "aksesoris",
-    "subcategory": "Speaker",
-    "price": 699000,
-    "image": "/products/monitor.png",
-    "rating": 4.6,
-    "sold": 85,
-    "shortDesc": "Speaker desktop dengan suara jelas, bass yang cukup, dan desain simpel untuk ruang kerja.",
-    "specs": [
-      {
-        "label": "Output",
-        "value": "2.0 Channel"
-      },
-      {
-        "label": "Koneksi",
-        "value": "3.5mm / USB"
-      },
-      {
-        "label": "Volume",
-        "value": "Kontrol knob"
-      },
-      {
-        "label": "Cocok untuk",
-        "value": "PC, laptop"
-      },
-      {
-        "label": "Warna",
-        "value": "Black"
-      }
-    ],
-    "stock": 14
-  },
-  {
-    "slug": "mini-pc-intel-nuc",
-    "name": "Intel NUC 11 Enthusiast",
-    "brand": "Intel",
-    "category": "pc",
-    "subcategory": "Mini PC",
-    "price": 12999000,
-    "image": "/products/pc-rakitan.png",
-    "rating": 4.7,
-    "sold": 42,
-    "shortDesc": "Mini PC compact dengan performa tinggi untuk gaming ringan, kerja, dan multimedia.",
-    "specs": [
-      {
-        "label": "Prosesor",
-        "value": "Intel Core i7"
-      },
-      {
-        "label": "GPU",
-        "value": "Intel Iris Xe"
-      },
-      {
-        "label": "RAM",
-        "value": "16GB DDR4"
-      },
-      {
-        "label": "Penyimpanan",
-        "value": "512GB SSD"
-      },
-      {
-        "label": "Bentuk",
-        "value": "Mini PC"
-      }
-    ],
-    "stock": 6
-  },
-  {
     "category": "komponen",
     "subcategory": "VGA",
     "brand": "MSI",
     "price": 3599000,
-    "stock": 1,
+    "stock": 0,
     "image": "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-0-1783302040847.png",
     "shortDesc": "✅ Fungsi tested\n✅ Kondisi 2nd mulus terawat\n✅ Suhu normal bukan pemarah \n✅ Unit only \n✅ Garansi Resmi off\n\n",
     "name": "GeForce RTX 3060 VENTUS 2X 12G OC",
@@ -614,14 +46,17 @@
       }
     ],
     "rating": 5,
-    "sold": 0
+    "sold": 0,
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
   },
   {
     "category": "komponen",
     "subcategory": "VGA",
     "brand": "NVIDIA",
     "price": 5399000,
-    "stock": 1,
+    "stock": 0,
     "image": "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-0-1783302477166.jpg",
     "shortDesc": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V merupakan VGA gaming berbasis arsitektur NVIDIA Ada Lovelace dengan VRAM GDDR6 8GB. Mengusung desain putih premium dengan efek holographic RGB, sistem pendingin triple fan, serta fitur One-Key Overclock yang memungkinkan peningkatan performa hanya dengan menekan tombol pada bracket. Sangat cocok untuk gaming 1080p Ultra hingga 1440p High, content creation, editing video, dan live streaming. Mendukung DLSS 3, Ray Tracing generasi terbaru, AV1 Encoder, dan konsumsi daya yang efisien sekitar 115 sampai 130W.",
     "name": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V",
@@ -667,7 +102,10 @@
     ],
     "slug": "RTX4060UltraWOC8GB-V",
     "rating": 5,
-    "sold": 0
+    "sold": 0,
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
   },
   {
     "category": "laptop-2nd",
@@ -705,6 +143,131 @@
       "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-2-1783332710310.jpeg",
       "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1783332710327.jpeg"
     ],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "subcategory": "Motherboard",
+    "brand": "ASUS",
+    "price": 899000,
+    "stock": 1,
+    "image": "/api/files/742129616_3102268046626808_8430447861996506236_n-1783437999248.jpg",
+    "shortDesc": "",
+    "name": "Ryzen5 3500x + ASUS A520M K Prime",
+    "slug": "ryzen5-3500x-asus-a520m-k-prime",
+    "oldPrice": 1000000,
+    "images": [
+      "/api/files/742129616_3102268046626808_8430447861996506236_n-1783437999248.jpg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": [],
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "subcategory": "Paket Mobo + Proc",
+    "brand": "ASUS",
+    "price": 5499000,
+    "stock": 1,
+    "image": "/api/files/738653473_952093217837704_7053645921311786689_n-1783442662330.jpg",
+    "shortDesc": "",
+    "description": "✅ ASUS PRIME Z790M-PLUS\n\nChipset Intel Z790\nSocket LGA1700\nSupport Intel Gen 12, 13 & 14\n4 Slot DDR5\nPCIe 5.0 x16\n3x M.2 NVMe PCIe 4.0\nHDMI + DisplayPort\nCocok untuk gaming maupun produktivitas.\n\n✅ Intel Core i7-12700F\n\n12 Core (8 Performance + 4 Efficient)\n20 Threads\nBoost hingga 4.9 GHz\nCache 25 MB\nCocok untuk Gaming, Editing, Rendering, Streaming, dan Multitasking.\n\nKondisi\n\n✅ Normal 100%\n✅ Siap pakai\n✅ Tidak ada kendala\n✅ Tes bebas sebelum deal (COD)\n\n📍 Lokasi: Tulungagung\n\n✅ COD\n✅ Kirim luar kota siap packing aman",
+    "name": "ASUS PRIME Z7290M PLUS + i7 12700F",
+    "slug": "asus-prime-z7290m-plus-i7-12700f",
+    "oldPrice": 5700000,
+    "images": [
+      "/api/files/738653473_952093217837704_7053645921311786689_n-1783442662330.jpg",
+      "/api/files/738796975_952093427837683_1864099602575600145_n-1783442662352.jpg",
+      "/api/files/735001922_952093284504364_4091775209460456034_n-1783442665786.jpg",
+      "/api/files/737674922_952093334504359_117075017583947610_n-1783442665810.jpg",
+      "/api/files/737875510_952093164504376_7982731528505824687_n-1783442665837.jpg",
+      "/api/files/738504000_952093501171009_4462214662170223848_n-1783442665858.jpg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": [],
+    "grade": "A"
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "Motherboard",
+    "brand": "MSI",
+    "price": 810000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-08-at-7-15-49-pm-1783587547789.jpeg",
+    "shortDesc": "",
+    "description": "Motherboard MSI MAG B460M Mortar bekas, kondisi normal dan siap pakai.\n\nSpesifikasi:\n\nSocket LGA1200\nChipset Intel B460\nForm Factor Micro-ATX\nSupport Intel Core Gen 10 (i3/i5/i7/i9), Pentium Gold & Celeron LGA1200\n4 Slot DDR4 (Dual Channel, hingga 128GB)\n2x M.2 NVMe (dengan M.2 Shield Frozr)\n6x SATA III\nPCIe 3.0 x16\nLAN 2.5GbE\nHDMI & DisplayPort\nAudio Realtek ALC1200\n\nKondisi:\n\n✅ Fungsi normal\n✅ Tidak pernah servis\n✅ Socket pin aman (tidak bengkok)\n✅ Fisik masih bagus (sesuai foto)\n✅ Cocok untuk build Intel Gen 10\n\nKelengkapan:\n\nMotherboard + Back panel only ",
+    "name": "MSI B460M Mortar",
+    "slug": "msi-b460m-mortar",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-08-at-7-15-49-pm-1783587547789.jpeg"
+    ],
+    "specs": [
+      {
+        "label": "Socket",
+        "value": "LGA1200"
+      },
+      {
+        "label": "Chipset",
+        "value": "B460"
+      },
+      {
+        "label": "",
+        "value": ""
+      }
+    ],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Gigabyte",
+    "price": 6099000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1783588063252.jpeg",
+    "shortDesc": "",
+    "description": "Kondisi mulus, normal 100%, siap pakai.\n\n✅ Garansi resmi (jika masih aktif)\n✅ Tidak pernah bongkar/segel aman\n✅ Fan normal, suhu dingin\n✅ No artifact, no kendala\n✅ Plug & Play\n\nSpesifikasi:\n\n8GB GDDR7\nPCIe Gen 5\nDLSS 4\nRay Tracing\nAV1 Encoder\nWINDFORCE Cooling\nCocok Gaming 1080p Ultra & 1440p High\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "name": "GeForce RTX™ 5060 WINDFORCE 8G",
+    "slug": "geforce-rtx-5060-windforce-8g",
+    "oldPrice": 6200000,
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1783588063252.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-53-pm-1-1783588067389.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-53-pm-1783588067512.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-2-1783588067530.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-55-pm-1783588067550.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Zotac",
+    "price": 6199000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1-1783588860617.jpeg",
+    "shortDesc": "",
+    "description": "Kondisi mulus, normal 100%, siap pakai. Cocok buat gaming, editing, rendering, maupun AI.\n\nSpesifikasi Singkat\n8GB GDDR7\nFactory Overclock (AMP Edition)\nDLSS 4\nRay Tracing\nNVIDIA Reflex\nAV1 Encoder\nPCIe Gen 5\nDual Fan Cooling\nFPS melimpah, anti patah-patah.",
+    "name": "ZOTAC GAMING GeForce RTX 5060 AMP 8GB GDDR7",
+    "slug": "zotac-gaming-geforce-rtx-5060-amp-8gb-gddr7",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1-1783588860617.jpeg"
+    ],
+    "specs": [],
     "rating": 5,
     "sold": 0
   }

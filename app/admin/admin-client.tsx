@@ -6,12 +6,14 @@ import {
   Plus, Edit, Trash2, ShoppingBag, Package, CheckCircle2,
   Clock, XCircle, AlertCircle, RefreshCw, Phone, MapPin, User, Calendar, Download, Sparkles, Image as ImageIcon, Laptop
 } from "lucide-react"
-import type { Product, Category, ProductVariant } from "@/lib/products"
+import type { Product, Category, ProductVariant, ProductCondition, ProductGrade } from "@/lib/products"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatRupiah, categories, subcategories, brandMap } from "@/lib/products"
 import { CustomPcTab } from "./custom-pc-tab"
 import { Laptop2ndTab } from "./laptop-2nd-tab"
+
+const PRODUCT_GRADE_OPTIONS: ProductGrade[] = ["A", "B", "C"]
 
 // ─── Order types ────────────────────────────────────────────────────
 type OrderStatus = "pending" | "confirmed" | "completed" | "cancelled"
@@ -329,6 +331,12 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const [itemToDelete, setItemToDelete] = useState<Product | null>(null)
   const router = useRouter()
 
+  const getDisplayCondition = (product: Partial<Product>) => {
+    if (product.productCondition) return product.productCondition
+    if (product.category === "laptop-2nd") return "used"
+    return undefined
+  }
+
   const [bannerSettings, setBannerSettings] = useState<{
     productSlug: string
     title: string
@@ -450,9 +458,13 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault()
     if (isAdding) {
+      const normalizedCondition = formData.productCondition || "new"
       const newProduct = {
         ...formData,
         slug: formData.slug || formData.name?.toLowerCase().replace(/\s+/g, '-') || "new-product",
+        productCondition: normalizedCondition,
+        grade: normalizedCondition === "used" ? (formData.grade || "B") : undefined,
+        description: formData.description || formData.condition || "",
         rating: 5.0,
         sold: 0,
         stock: formData.stock || 0,
@@ -471,10 +483,17 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
         router.refresh()
       }
     } else if (isEditing) {
+      const normalizedCondition = formData.productCondition || (formData.category === "laptop-2nd" ? "used" : "new")
+      const payload = {
+        ...formData,
+        productCondition: normalizedCondition,
+        grade: normalizedCondition === "used" ? (formData.grade || "B") : undefined,
+        description: formData.description || formData.condition || "",
+      }
       const res = await fetch("/api/products", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       })
       if (res.ok) {
         const data = await res.json()
@@ -493,12 +512,15 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
   const openAdd = () => {
     setFormData({
       category: "aksesoris",
+      productCondition: "new",
+      grade: undefined,
       subcategory: "",
       brand: "Oniforge",
       price: 0,
       stock: 0,
       image: "",
       shortDesc: "",
+      description: "",
     })
     setIsAdding(true)
   }
@@ -600,6 +622,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                 <th className="p-4 font-semibold">Gambar</th>
                 <th className="p-4 font-semibold">Nama Produk</th>
                 <th className="p-4 font-semibold">Kategori</th>
+                <th className="p-4 font-semibold">Kondisi</th>
                 <th className="p-4 font-semibold">Harga</th>
                 <th className="p-4 font-semibold">Stok</th>
                 <th className="p-4 font-semibold">Terjual</th>
@@ -616,6 +639,15 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                   </td>
                   <td className="p-4 font-medium">{p.name}</td>
                   <td className="p-4 uppercase">{p.category}</td>
+                  <td className="p-4">
+                    {getDisplayCondition(p) ? (
+                      <span className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${getDisplayCondition(p) === "used" ? "bg-amber-500/10 text-amber-600 dark:text-amber-400" : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"}`}>
+                        {getDisplayCondition(p) === "used" ? "Bekas" : "Baru"}
+                      </span>
+                    ) : (
+                      <span className="text-muted-foreground">-</span>
+                    )}
+                  </td>
                   <td className="p-4 font-semibold">{formatRupiah(p.price)}</td>
                   <td className="p-4">
                     <span className={`font-semibold ${(p.stock ?? 0) <= 5 ? "text-red-500" : ""}`}>
@@ -636,7 +668,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                 </tr>
               ))}
               {products.length === 0 && (
-                <tr><td colSpan={7} className="p-4 text-center text-muted-foreground">Tidak ada produk</td></tr>
+                <tr><td colSpan={8} className="p-4 text-center text-muted-foreground">Tidak ada produk</td></tr>
               )}
             </tbody>
           </table>
@@ -810,7 +842,15 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                   <select required value={formData.category || "aksesoris"} onChange={e => {
                     const category = e.target.value as Category
                     const nextSubcategory = subcategories[category]?.[0] || ""
-                    setFormData({ ...formData, category, subcategory: nextSubcategory })
+                    setFormData({
+                      ...formData,
+                      category,
+                      subcategory: nextSubcategory,
+                      productCondition: category === "laptop-2nd" ? "used" : (formData.productCondition || "new"),
+                      grade: category === "laptop-2nd"
+                        ? (formData.grade || "B")
+                        : ((formData.productCondition || "new") === "used" ? (formData.grade || "B") : undefined),
+                    })
                   }} className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none">
                     {categories.map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
                   </select>
@@ -825,6 +865,43 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                   </select>
                 </div>
               </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium">Kondisi Barang</label>
+                <select
+                  required
+                  value={formData.productCondition || (formData.category === "laptop-2nd" ? "used" : "new")}
+                  onChange={e => {
+                    const nextCondition = e.target.value as ProductCondition
+                    setFormData({
+                      ...formData,
+                      productCondition: nextCondition,
+                      grade: nextCondition === "used" ? (formData.grade || "B") : undefined,
+                    })
+                  }}
+                  className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none"
+                >
+                  <option value="new">Baru</option>
+                  <option value="used">Bekas</option>
+                </select>
+              </div>
+              {(formData.productCondition || (formData.category === "laptop-2nd" ? "used" : "new")) === "used" && (
+                <div>
+                  <label className="mb-1 block text-sm font-medium">Grade Kondisi</label>
+                  <select
+                    required
+                    value={formData.grade || "B"}
+                    onChange={e => setFormData({ ...formData, grade: e.target.value as ProductGrade })}
+                    className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none"
+                  >
+                    {PRODUCT_GRADE_OPTIONS.map((grade) => (
+                      <option key={grade} value={grade}>
+                        {`Grade ${grade}`}
+                      </option>
+                    ))}
+                  </select>
+                  <p className="mt-1 text-xs text-muted-foreground">Dipakai untuk menandai kualitas fisik produk bekas seperti di katalog laptop 2nd.</p>
+                </div>
+              )}
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="mb-1 block text-sm font-medium">Merek</label>
@@ -899,7 +976,7 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
               <div>
                 <label className="mb-1 block text-sm font-medium">Deskripsi Lengkap</label>
                 <p className="mb-1.5 text-xs text-muted-foreground">Tulis deskripsi detail produk. Tekan Enter untuk baris baru. Bisa pakai emoji seperti ✅ 📦 ✨</p>
-                <textarea value={formData.condition || ""} onChange={e => setFormData({ ...formData, condition: e.target.value })} rows={10} placeholder={"Contoh:\nLaptop bisnis premium kondisi mulus.\n\nSpesifikasi:\n✅ Intel Core i5 Gen 12\n✅ RAM 16GB DDR4\n✅ SSD 512GB\n\nKondisi:\n✓ Body mulus\n✓ Layar jernih\n\nKelengkapan:\n📦 Laptop + Charger"} className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary" />
+                <textarea value={formData.description || formData.condition || ""} onChange={e => setFormData({ ...formData, description: e.target.value })} rows={10} placeholder={"Contoh:\nLaptop bisnis premium kondisi mulus.\n\nSpesifikasi:\n✅ Intel Core i5 Gen 12\n✅ RAM 16GB DDR4\n✅ SSD 512GB\n\nKondisi:\n✓ Body mulus\n✓ Layar jernih\n\nKelengkapan:\n📦 Laptop + Charger"} className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary" />
               </div>
 
               {/* === SPESIFIKASI PRODUK === */}

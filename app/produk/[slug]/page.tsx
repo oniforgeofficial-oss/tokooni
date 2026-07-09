@@ -20,9 +20,10 @@ export async function generateMetadata({
   const { slug } = await params
   const product = await getProduct(slug)
   if (!product) return { title: "Produk tidak ditemukan — Oniforge" }
+  const metadataDescription = product.shortDesc || product.description || product.condition?.slice(0, 160)
   return {
     title: `${product.name} — Oniforge`,
-    description: product.shortDesc || product.condition?.slice(0, 160),
+    description: metadataDescription,
   }
 }
 
@@ -34,6 +35,8 @@ export default async function ProductDetailPage({
   const { slug } = await params
   const product = await getProduct(slug)
   if (!product) notFound()
+
+  const detailedDescription = product.description || product.condition
 
   const products = await getProducts()
   let related = products
@@ -129,11 +132,11 @@ export default async function ProductDetailPage({
           )}
 
           {/* Deskripsi Lengkap */}
-          {product.condition && (
+          {detailedDescription && (
             <div className="mt-8">
               <h2 className="text-lg font-semibold mb-3">Deskripsi</h2>
               <div className="rounded-xl border bg-card p-4 text-sm leading-relaxed whitespace-pre-line text-muted-foreground">
-                {product.condition}
+                {detailedDescription}
               </div>
             </div>
           )}

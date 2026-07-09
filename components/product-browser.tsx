@@ -89,6 +89,9 @@ export function ProductBrowser({
     })
 
     list = [...list].sort((a, b) => {
+      const stockPriority = Number(b.stock > 0) - Number(a.stock > 0)
+      if (stockPriority !== 0) return stockPriority
+
       if (sort === "termurah") return a.price - b.price
       if (sort === "termahal") return b.price - a.price
       if (sort === "terbaru") return products.indexOf(b) - products.indexOf(a)

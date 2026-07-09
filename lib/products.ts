@@ -2,6 +2,8 @@ export type Category = "laptop" | "pc" | "komponen" | "aksesoris" | "laptop-2nd"
 
 export type ProductGrade = "A" | "B" | "C"
 
+export type ProductCondition = "new" | "used"
+
 export type ProductVariant = {
   label: string
   price: number
@@ -12,6 +14,7 @@ export type Product = {
   name: string
   brand: string
   category: Category
+  productCondition?: ProductCondition
   price: number
   oldPrice?: number
   image: string
@@ -21,10 +24,11 @@ export type Product = {
   stock: number
   badge?: string
   shortDesc: string
+  description?: string
   specs: { label: string; value: string }[]
   variants?: ProductVariant[]
   subcategory?: string
-  // Laptop 2nd specific fields
+  // Legacy / laptop 2nd specific fields
   condition?: string
   grade?: ProductGrade
   batteryHealth?: number
@@ -42,7 +46,7 @@ export const categories: { id: Category; label: string; desc: string }[] = [
 export const subcategories: Record<Category, string[]> = {
   laptop: ["Gaming Laptop", "Workstation Laptop", "Ultrabook", "Laptop AIO"],
   pc: ["PC Gaming", "PC Workstation", "Mini PC", "Desktop PC"],
-  komponen: ["VGA", "Processor", "RAM", "Storage", "Motherboard", "Cooling", "PSU", "Case"],
+  komponen: ["VGA", "Processor", "Paket Mobo + Proc", "RAM", "Storage", "Motherboard", "Cooling", "PSU", "Case"],
   aksesoris: ["Monitor", "Keyboard", "Mouse", "Headset", "Mousepad", "Webcam", "Speaker"],
   "laptop-2nd": ["Grade A", "Grade B", "Grade C"],
 }
@@ -74,6 +78,7 @@ export const brandMap: Record<string, string[]> = {
   // Components
   VGA: ["NVIDIA", "AMD", "ASUS", "MSI", "Gigabyte", "Zotac", "Palit"],
   Processor: ["Intel", "AMD"],
+  "Paket Mobo + Proc": ["Intel", "AMD", "ASUS", "MSI", "Gigabyte", "ASRock", "Biostar"],
   RAM: ["Corsair", "G.SKILL", "Kingston", "ADATA", "Crucial", "TeamGroup"],
   Storage: ["Samsung", "Western Digital", "Seagate", "Crucial", "Kingston"],
   Motherboard: ["ASUS", "MSI", "Gigabyte", "ASRock"],

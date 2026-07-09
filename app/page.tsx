@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowRight, ShieldCheck, Truck, Headphones, CreditCard } from "lucide-react"
 import { categories, formatRupiah } from "@/lib/products"
 import { getProducts } from "@/lib/api-products"
 import { getBannerSettings } from "@/lib/api-banner"
+import { HeroBannerSlideshow } from "@/components/hero-banner-slideshow"
 import { Button } from "@/components/ui/button"
 import { ProductCard } from "@/components/product-card"
 import { CountdownTimer } from "@/components/countdown-timer"
@@ -58,13 +58,13 @@ const brandsLoop = [...brands, ...brands, ...brands]
 export default async function HomePage() {
   const products = await getProducts()
   const bannerSettings = await getBannerSettings()
+  const inStockFirstProducts = [...products].sort((a, b) => Number(b.stock > 0) - Number(a.stock > 0))
   
   // Find product for banner, fallback to first product if not found
   const bannerProduct = products.find(p => p.slug === bannerSettings.productSlug) || products[0]
-
-  const featured = products.slice(0, 4)
-  const newest = [...products].reverse().slice(0, 4)
-  const recommended = products.slice(4, 12) // Batasi 8 agar tidak terlalu panjang
+  const featured = inStockFirstProducts.slice(0, 4)
+  const newest = [...products].reverse().sort((a, b) => Number(b.stock > 0) - Number(a.stock > 0)).slice(0, 4)
+  const recommended = inStockFirstProducts.slice(4, 12) // Batasi 8 agar tidak terlalu panjang
 
   return (
     <div>
@@ -138,29 +138,12 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-black/10 bg-gradient-to-br from-secondary/50 to-secondary/10 lg:aspect-[4/3] flex items-center justify-center p-4 sm:p-6 shadow-xl group hover:border-primary/20 transition-all duration-300">
-            {bannerProduct ? (
-              <Link href={`/produk/${bannerProduct.slug}`} className="relative w-full h-full block">
-                <Image
-                  src={bannerProduct.image || "/placeholder.svg"}
-                  alt={bannerProduct.name}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                />
-              </Link>
-            ) : (
-              <Image
-                src="/products/oniforge.png"
-                alt="PC rakitan gaming Oniforge"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-6"
-              />
-            )}
-          </div>
+          <HeroBannerSlideshow
+            productSlug={bannerProduct?.slug}
+            productName={bannerProduct?.name || "PC rakitan gaming Oniforge"}
+            primaryImage={bannerProduct?.image || "/products/oniforge.png"}
+            images={bannerProduct?.images}
+          />
         </div>
       </section>
 
