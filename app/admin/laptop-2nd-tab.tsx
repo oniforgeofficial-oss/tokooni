@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { Plus, Edit, Trash2, XCircle, Laptop, RefreshCw, ShieldCheck, Battery } from "lucide-react"
+import { Plus, Edit, Trash2, XCircle, Laptop, RefreshCw, Battery } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { formatRupiah, type Product, type ProductGrade } from "@/lib/products"
@@ -188,17 +188,35 @@ export function Laptop2ndTab() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="mb-1 block text-sm font-medium">Merek / Brand</label>
-              <select
-                required
-                value={formData.brand || ""}
-                onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-                className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
-              >
-                <option value="">Pilih Merek</option>
-                {["Asus", "MSI", "Acer", "Lenovo", "HP", "Dell", "Razer", "Gigabyte", "Apple", "Toshiba", "Samsung"].map((b) => (
-                  <option key={b} value={b}>{b}</option>
-                ))}
-              </select>
+              <div className="space-y-2">
+                <input
+                  required
+                  type="text"
+                  placeholder="Ketik merek produk..."
+                  value={formData.brand || ""}
+                  onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
+                  className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40 transition"
+                />
+                <div>
+                  <p className="text-xs text-muted-foreground mb-1.5">Rekomendasi merek:</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Asus", "MSI", "Acer", "Lenovo", "HP", "Dell", "Razer", "Gigabyte", "Apple", "Toshiba", "Samsung"].map((b) => (
+                      <button
+                        key={b}
+                        type="button"
+                        onClick={() => setFormData({ ...formData, brand: b })}
+                        className={`rounded-full border px-2.5 py-0.5 text-xs font-medium transition-all ${
+                          formData.brand === b
+                            ? "border-primary bg-primary text-primary-foreground"
+                            : "border-border bg-muted text-muted-foreground hover:border-primary hover:text-primary"
+                        }`}
+                      >
+                        {b}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <label className="mb-1 block text-sm font-medium">Grade Kondisi</label>
@@ -269,8 +287,8 @@ export function Laptop2ndTab() {
             <textarea
               rows={10}
               placeholder={"Laptop bisnis premium kondisi mulus.\n\nSpesifikasi:\n✅ Intel Core i5 Gen 12\n✅ RAM 16GB DDR4\n✅ SSD NVMe 512GB\n\nKondisi:\n✓ Body mulus & terawat\n✓ Layar jernih\n✓ Keyboard & Touchpad normal\n\nKelengkapan:\n📦 Laptop + Charger Original"}
-              value={formData.condition || ""}
-              onChange={(e) => setFormData({ ...formData, condition: e.target.value })}
+              value={formData.description || ""}
+              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
             />
           </div>

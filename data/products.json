@@ -232,11 +232,11 @@
     "grade": "A",
     "subcategory": "VGA",
     "brand": "Gigabyte",
-    "price": 6099000,
+    "price": 6049000,
     "stock": 1,
     "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1783588063252.jpeg",
     "shortDesc": "",
-    "description": "Kondisi mulus, normal 100%, siap pakai.\n\n✅ Garansi resmi (jika masih aktif)\n✅ Tidak pernah bongkar/segel aman\n✅ Fan normal, suhu dingin\n✅ No artifact, no kendala\n✅ Plug & Play\n\nSpesifikasi:\n\n8GB GDDR7\nPCIe Gen 5\nDLSS 4\nRay Tracing\nAV1 Encoder\nWINDFORCE Cooling\nCocok Gaming 1080p Ultra & 1440p High\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "description": "Kondisi mulus, normal 100%, siap pakai.\n\n✅ Tidak pernah bongkar/segel aman\n✅ Fan normal, suhu dingin\n✅ No artifact, no kendala\n✅ Plug & Play\n\nSpesifikasi:\n\n8GB GDDR7\nPCIe Gen 5\nDLSS 4\nRay Tracing\nAV1 Encoder\nWINDFORCE Cooling\nCocok Gaming 1080p Ultra & 1440p High\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
     "name": "GeForce RTX™ 5060 WINDFORCE 8G",
     "slug": "geforce-rtx-5060-windforce-8g",
     "oldPrice": 6200000,
@@ -257,7 +257,7 @@
     "grade": "A",
     "subcategory": "VGA",
     "brand": "Zotac",
-    "price": 6199000,
+    "price": 6149000,
     "stock": 1,
     "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1-1783588860617.jpeg",
     "shortDesc": "",
@@ -270,5 +270,55 @@
     "specs": [],
     "rating": 5,
     "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "B",
+    "subcategory": "Storage",
+    "brand": "Toshiba",
+    "price": 875000,
+    "stock": 1,
+    "image": "/api/files/toshiba-1tb-1783611251162.jpeg",
+    "shortDesc": "",
+    "description": "🔥 SSD NVMe 1TB Murah – Speed Kencang!\n\nMau upgrade PC atau laptop biar makin ngebut? SSD ini siap pakai!\n\n✅ Kapasitas 1TB\n✅ Read sampai 3274 MB/s\n✅ Write sampai 3088 MB/s\n✅ Performance 100%\n✅ Health 74% (Good)\n✅ Sudah lolos pengecekan Hard Disk Sentinel & CrystalDiskMark\n\nBooting Windows, loading game, dan transfer file jadi jauh lebih cepat dibanding HDD maupun SATA SSD.",
+    "images": [
+      "/api/files/toshiba-1tb-1783611251162.jpeg"
+    ],
+    "name": "SSD NVMe Toshiba 1TB",
+    "slug": "ssd-nvme-toshiba-1tb",
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "RAM",
+    "brand": "XPG",
+    "price": 2600000,
+    "stock": 3,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg",
+    "shortDesc": "",
+    "description": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35 | V-Color\n\nDijual beberapa pilihan RAM DDR4 kapasitas 32GB (2x16GB) dalam kondisi bekas, normal, dan siap pakai.\n\nPilihan:\n\n✅ Apacer NOX White 32GB (2x16GB)\n✅ XPG GAMMIX D35 White 32GB (2x16GB)\n✅ V-Color Black 32GB (2x16GB)\n\nSpesifikasi:\n\nKapasitas: 32GB (2x16GB)\nTipe: DDR4 Desktop\nDual Channel Kit\nKondisi: Bekas, normal 100%\nSudah dites, siap pakai\nCocok untuk Intel & AMD (motherboard DDR4)\n\nCocok untuk gaming, editing, rendering, streaming, maupun upgrade PC agar multitasking lebih lancar.\n\n📌 Harga tertera untuk 1 set (2x16GB).\n📌 Silakan pilih merk sesuai stok yang tersedia.",
+    "name": "RAM 32GB DDR4",
+    "slug": "ram-32gb-ddr4",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg"
+    ],
+    "variants": [
+      {
+        "label": "Apacer NOX White (2x16GB DDR4)",
+        "price": 2500000
+      },
+      {
+        "label": "V-Color Black (2x16GB DDR4)",
+        "price": 2500000
+      }
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
   }
 ]

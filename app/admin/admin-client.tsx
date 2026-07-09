@@ -906,20 +906,35 @@ export function AdminDashboardClient({ initialProducts }: { initialProducts: Pro
                 <div>
                   <label className="mb-1 block text-sm font-medium">Merek</label>
                   <div className="space-y-2">
-                    <select
+                    <input
                       required
-                      value={brandOptions.includes(formData.brand || "") ? formData.brand || "" : ""}
+                      type="text"
+                      placeholder="Ketik merek produk..."
+                      value={formData.brand || ""}
                       onChange={e => setFormData({ ...formData, brand: e.target.value })}
-                      className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none"
-                    >
-                      <option value="">Pilih Merek</option>
-                      {brandOptions.map((b) => (
-                        <option key={b} value={b}>
-                          {b}
-                        </option>
-                      ))}
-                    </select>
-                    <p className="text-xs text-muted-foreground">Pilih merek yang sesuai dengan kategori/subkategori.</p>
+                      className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40 transition"
+                    />
+                    {brandOptions.length > 0 && (
+                      <div>
+                        <p className="text-xs text-muted-foreground mb-1.5">Rekomendasi merek:</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {brandOptions.map((b) => (
+                            <button
+                              key={b}
+                              type="button"
+                              onClick={() => setFormData({ ...formData, brand: b })}
+                              className={`rounded-full border px-2.5 py-0.5 text-xs font-medium transition-all ${
+                                formData.brand === b
+                                  ? "border-primary bg-primary text-primary-foreground"
+                                  : "border-border bg-muted text-muted-foreground hover:border-primary hover:text-primary"
+                              }`}
+                            >
+                              {b}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
