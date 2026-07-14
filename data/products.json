@@ -320,5 +320,85 @@
     "rating": 5,
     "sold": 0,
     "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "ASUS",
+    "price": 7100000,
+    "stock": 1,
+    "image": "/api/files/asus-rog-strix-rtx-4060ti-8gb-garansi-2029-hrga-user-7jt-1784045967202.jpeg",
+    "shortDesc": "",
+    "description": "Dijual ASUS ROG STRIX RTX 4060 Ti 8GB OC Edition\n\nKondisi mulus, normal 100%, siap pakai. Cocok buat gaming, editing, rendering, maupun AI.\n\nSpesifikasi:\n\n✅ VRAM 8GB GDDR6\n✅ Triple Fan Axial-tech Cooling\n✅ RGB Aura Sync\n✅ DLSS 3 & Ray Tracing\n✅ PCIe 4.0\n✅ HDMI 2.1a + 3x DisplayPort 1.4a\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "name": "ASUS ROG STRIX RTX 4060TI 8GB",
+    "slug": "asus-rog-strix-rtx-4060ti-8gb",
+    "images": [
+      "/api/files/asus-rog-strix-rtx-4060ti-8gb-garansi-2029-hrga-user-7jt-1784045967202.jpeg"
+    ],
+    "specs": [],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Sapphire",
+    "price": 2200000,
+    "stock": 1,
+    "image": "/api/files/sapphire-rx-6600xt-8gb-2nd-garansi-off-personal-7hari-dari-aku-2-1jt-suhu-adem-normal-1784046321004.jpeg",
+    "shortDesc": "",
+    "description": "Dijual VGA Sapphire Pulse Radeon RX 6600 XT 8GB kondisi bekas, performa masih sangat normal dan siap pakai. Cocok untuk gaming 1080p High/Ultra, esports, hingga editing ringan. Suhu adem, fan normal, tidak ada kendala.\n\nSpesifikasi:\n\n✅ AMD Radeon RX 6600 XT\n✅ VRAM 8GB GDDR6\n✅ Dual Fan Cooling\n✅ PCIe 4.0\n✅ HDMI + 3x DisplayPort\n✅ Cocok untuk game AAA & esports 1080p High/Ultra\n\nKondisi:\n\n✅ Garansi resmi OFF\n✅ Garansi personal 7 hari (cek fungsi)\n✅ Suhu adem & performa normal\n✅ Siap pakai, tinggal pasang\n\n📍 Lokasi: Tulungagung \n\n✅ COD sesuai lokasi \n✅ Rekber oke \n✅ Kirim luar kota siap packing aman",
+    "name": "Sapphire Pulse Radeon RX 6600 XT 8GB",
+    "slug": "sapphire-pulse-radeon-rx-6600-xt-8gb",
+    "images": [
+      "/api/files/sapphire-rx-6600xt-8gb-2nd-garansi-off-personal-7hari-dari-aku-2-1jt-suhu-adem-normal-1784046321004.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "Paket Mobo + Proc",
+    "brand": "Intel",
+    "price": 1400000,
+    "stock": 1,
+    "image": "/api/files/i3-10100f-msi-h410m-lngkap-box-garansi-off-hrga-aku-1300-paketan-1784046391778.jpeg",
+    "shortDesc": "",
+    "description": "Dijual paket Intel Core i3-10100F + MSI PRO H410M-B, cocok untuk rakit PC gaming maupun produktivitas dengan budget terjangkau. Tinggal tambah RAM, SSD, PSU, dan VGA (karena seri F tidak memiliki iGPU).\n\nSpesifikasi:\n\n✅ Intel Core i3-10100F\n4 Core / 8 Thread\nBoost hingga 4.3 GHz\n✅ MSI PRO H410M-B\n✅ Socket LGA1200\n✅ Lengkap Box Motherboard\n✅ Support RAM DDR4\n✅ Support NVMe M.2 SSD\n\nKondisi:\n\n✅ Garansi resmi OFF\n✅ Kondisi normal, siap pakai\n✅ Sudah dites, performa normal\n\n📍 Lokasi: Tulungagung\n\n✅ COD Tulungagung & sekitarnya (bisa cek barang sampai puas)\n✅ Rekber welcome (sesuai ketentuan)\n✅ Pengiriman ke seluruh Indonesia\n✅ Packing aman & rapi menggunakan bubble wrap + kardus tebal",
+    "name": "Intel Core i3-10100F + MSI PRO H410M-B",
+    "slug": "intel-core-i3-10100f-msi-pro-h410m-b",
+    "images": [
+      "/api/files/i3-10100f-msi-h410m-lngkap-box-garansi-off-hrga-aku-1300-paketan-1784046391778.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "B",
+    "subcategory": "RAM",
+    "brand": "Ramsta",
+    "price": 1050000,
+    "stock": 1,
+    "image": "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg",
+    "shortDesc": "",
+    "description": "Dijual RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz kondisi normal dan siap pakai. Cocok untuk upgrade PC gaming maupun editing agar performa lebih kencang dan multitasking lebih lancar.\n\nSpesifikasi\n\n✅ Brand: RAMSTA RGB Memory\n✅ Kapasitas: 16GB (2x8GB)\n✅ Tipe: DDR4\n✅ Kecepatan: 3200MHz\n✅ RGB Lighting aktif\n✅ Support Intel & AMD\n✅ Cocok untuk gaming, streaming, editing, dan kerja multitasking\n\nKondisi\n\n✅ Kondisi normal\n✅ Tidak ada kendala\n✅ Siap pakai tinggal pasang\n✅ Sudah dites berjalan stabil\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "images": [
+      "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg"
+    ],
+    "name": "RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz",
+    "slug": "ramsta-rgb-ddr4-16gb-2x8gb-3200mhz",
+    "rating": 5,
+    "sold": 0,
+    "specs": []
   }
 ]
