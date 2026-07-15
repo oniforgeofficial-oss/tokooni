@@ -298,11 +298,11 @@
     "subcategory": "RAM",
     "brand": "XPG",
     "price": 2600000,
-    "stock": 3,
+    "stock": 2,
     "image": "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg",
     "shortDesc": "",
-    "description": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35 | V-Color\n\nDijual beberapa pilihan RAM DDR4 kapasitas 32GB (2x16GB) dalam kondisi bekas, normal, dan siap pakai.\n\nPilihan:\n\n✅ Apacer NOX White 32GB (2x16GB)\n✅ XPG GAMMIX D35 White 32GB (2x16GB)\n✅ V-Color Black 32GB (2x16GB)\n\nSpesifikasi:\n\nKapasitas: 32GB (2x16GB)\nTipe: DDR4 Desktop\nDual Channel Kit\nKondisi: Bekas, normal 100%\nSudah dites, siap pakai\nCocok untuk Intel & AMD (motherboard DDR4)\n\nCocok untuk gaming, editing, rendering, streaming, maupun upgrade PC agar multitasking lebih lancar.\n\n📌 Harga tertera untuk 1 set (2x16GB).\n📌 Silakan pilih merk sesuai stok yang tersedia.",
-    "name": "RAM 32GB DDR4",
+    "description": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35 | V-Color (Sold)\n\nDijual beberapa pilihan RAM DDR4 kapasitas 32GB (2x16GB) dalam kondisi bekas, normal, dan siap pakai.\n\nPilihan:\n\n✅ Apacer NOX White 32GB (2x16GB)\n✅ XPG GAMMIX D35 White 32GB (2x16GB)\n✅ V-Color Black 32GB (2x16GB)\n\nSpesifikasi:\n\nKapasitas: 32GB (2x16GB)\nTipe: DDR4 Desktop\nDual Channel Kit\nKondisi: Bekas, normal 100%\nSudah dites, siap pakai\nCocok untuk Intel & AMD (motherboard DDR4)\n\nCocok untuk gaming, editing, rendering, streaming, maupun upgrade PC agar multitasking lebih lancar.\n\n📌 Harga tertera untuk 1 set (2x16GB).\n📌 Silakan pilih merk sesuai stok yang tersedia.",
+    "name": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35",
     "slug": "ram-32gb-ddr4",
     "images": [
       "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg"
@@ -313,12 +313,12 @@
         "price": 2500000
       },
       {
-        "label": "V-Color Black (2x16GB DDR4)",
+        "label": "XPG GAMMIX D35 (2x16GB DDR4)",
         "price": 2500000
       }
     ],
     "rating": 5,
-    "sold": 0,
+    "sold": 1,
     "specs": []
   },
   {

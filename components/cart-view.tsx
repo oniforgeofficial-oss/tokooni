@@ -1,21 +1,15 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react"
-import { toast } from "sonner"
 import { useCart } from "@/lib/cart-context"
 import { formatRupiah } from "@/lib/products"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 
-const SHIPPING = 25000
-
 export function CartView() {
-  const { items, subtotal, count, updateQty, removeItem, clear } = useCart()
-  const [submitting, setSubmitting] = useState(false)
+  const { items, subtotal, count, updateQty, removeItem } = useCart()
 
   if (items.length === 0) {
     return (
@@ -37,19 +31,7 @@ export function CartView() {
     )
   }
 
-  const total = subtotal + SHIPPING
 
-  function handleCheckout(e: React.FormEvent) {
-    e.preventDefault()
-    setSubmitting(true)
-    setTimeout(() => {
-      setSubmitting(false)
-      clear()
-      toast.success("Pesanan berhasil dibuat!", {
-        description: "Terima kasih telah berbelanja di Oniforge.",
-      })
-    }, 1200)
-  }
 
   return (
     <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_360px]">
@@ -77,6 +59,9 @@ export function CartView() {
                 >
                   {item.name}
                 </Link>
+                {item.variant && (
+                  <p className="mt-0.5 text-xs text-muted-foreground">{item.variant}</p>
+                )}
                 <p className="mt-1 text-sm font-semibold text-primary">
                   {formatRupiah(item.price)}
                 </p>
@@ -131,39 +116,8 @@ export function CartView() {
 
       {/* Summary + checkout */}
       <div className="lg:sticky lg:top-20 lg:self-start">
-        <form
-          onSubmit={handleCheckout}
-          className="flex flex-col gap-4 rounded-xl border bg-card p-5"
-        >
+        <div className="flex flex-col gap-4 rounded-xl border bg-card p-5">
           <h2 className="text-lg font-semibold">Ringkasan Pesanan</h2>
-
-          <div className="grid gap-3">
-            <div className="grid gap-1.5">
-              <label htmlFor="nama" className="text-sm font-medium">
-                Nama Lengkap
-              </label>
-              <Input id="nama" required placeholder="Nama penerima" />
-            </div>
-            <div className="grid gap-1.5">
-              <label htmlFor="alamat" className="text-sm font-medium">
-                Alamat Pengiriman
-              </label>
-              <Input id="alamat" required placeholder="Alamat lengkap" />
-            </div>
-            <div className="grid gap-1.5">
-              <label htmlFor="telepon" className="text-sm font-medium">
-                Nomor Telepon
-              </label>
-              <Input
-                id="telepon"
-                type="tel"
-                required
-                placeholder="08xxxxxxxxxx"
-              />
-            </div>
-          </div>
-
-          <Separator />
 
           <div className="flex flex-col gap-2 text-sm">
             <div className="flex justify-between">
@@ -172,26 +126,20 @@ export function CartView() {
               </span>
               <span className="font-medium">{formatRupiah(subtotal)}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Ongkos Kirim</span>
-              <span className="font-medium">{formatRupiah(SHIPPING)}</span>
-            </div>
+            <p className="text-right text-[10px] text-muted-foreground">
+              *Belum termasuk biaya pengiriman
+            </p>
           </div>
 
           <Separator />
 
           <div className="flex items-center justify-between">
             <span className="font-semibold">Total</span>
-            <span className="text-xl font-bold">{formatRupiah(total)}</span>
+            <span className="text-xl font-bold">{formatRupiah(subtotal)}</span>
           </div>
 
-          <Button type="submit" size="lg" disabled={submitting}>
-            {submitting ? "Memproses..." : "Buat Pesanan"}
-          </Button>
-          <p className="text-center text-xs text-muted-foreground">
-            Dengan melanjutkan, kamu menyetujui syarat & ketentuan Oniforge.
-          </p>
-        </form>
+          <Button size="lg" className="w-full mt-2" nativeButton={false} render={<Link href="/checkout">Lanjut ke Checkout</Link>} />
+        </div>
       </div>
     </div>
   )

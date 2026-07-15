@@ -2,53 +2,24 @@ import { promises as fs, existsSync } from "fs"
 import path from "path"
 import { NextResponse } from "next/server"
 import { getProducts, saveProducts } from "@/lib/api-products"
+import { readOrders, type OrderStatus, type OrderRecord } from "@/lib/api-orders"
+
+export type { OrderStatus, OrderRecord }
 
 const originalOrdersFile = path.join(process.cwd(), "public", "data", "orders.json")
 // Use /tmp for Vercel serverless environment which has read-only filesystem
 const tmpOrdersFile = path.join("/tmp", "orders.json")
 
-export type OrderStatus = "pending" | "confirmed" | "completed" | "cancelled"
-
-export type OrderRecord = {
-  id: number
-  createdAt: string
-  name: string
-  address: string
-  phone: string
-  items: {
-    slug: string
-    name: string
-    price: number
-    qty: number
-    variant?: string | null
-  }[]
-  total: number
-  status: OrderStatus
-  completedAt?: string
-}
-
-async function readOrders(): Promise<OrderRecord[]> {
-  try {
-    const fileToRead = existsSync(tmpOrdersFile) ? tmpOrdersFile : originalOrdersFile
-    const data = await fs.readFile(fileToRead, "utf-8")
-    return JSON.parse(data) as OrderRecord[]
-  } catch {
-    return []
-  }
-}
 
 async function writeOrders(orders: OrderRecord[]) {
-  // Write to /tmp so it works on Vercel
-  await fs.writeFile(tmpOrdersFile, JSON.stringify(orders, null, 2), "utf-8")
-  
-  // In local development, also try to save it to the actual file
   if (process.env.NODE_ENV === "development") {
-    try {
-      await fs.mkdir(path.dirname(originalOrdersFile), { recursive: true })
-      await fs.writeFile(originalOrdersFile, JSON.stringify(orders, null, 2), "utf-8")
-    } catch (localErr) {
-      // Ignore errors in production if original path is read-only
-    }
+    // Di localhost (termasuk Windows), langsung tulis ke file asli
+    // karena /tmp tidak tersedia di Windows
+    await fs.mkdir(path.dirname(originalOrdersFile), { recursive: true })
+    await fs.writeFile(originalOrdersFile, JSON.stringify(orders, null, 2), "utf-8")
+  } else {
+    // Di Vercel (production), tulis ke /tmp karena filesystem read-only
+    await fs.writeFile(tmpOrdersFile, JSON.stringify(orders, null, 2), "utf-8")
   }
 }
 

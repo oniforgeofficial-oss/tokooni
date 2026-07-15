@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ChevronRight, Star } from "lucide-react"
 import { formatRupiah } from "@/lib/products"
 import { getProduct, getProducts } from "@/lib/api-products"
+import { getActiveOrderedVariants } from "@/lib/api-orders"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { ProductActions } from "@/components/product-actions"
@@ -49,6 +50,10 @@ export default async function ProductDetailPage({
       .slice(0, 4 - related.length)
     related = [...related, ...otherProducts]
   }
+
+  // Ambil varian yang sedang aktif dipesan untuk produk ini
+  const orderedVariantsSet = await getActiveOrderedVariants(product.slug)
+  const orderedVariants = Array.from(orderedVariantsSet)
 
   const discount = product.oldPrice
     ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
@@ -108,7 +113,7 @@ export default async function ProductDetailPage({
 
           {/* Mobile: ProductActions */}
           <div className="lg:hidden">
-            <ProductActions product={product} />
+            <ProductActions product={product} orderedVariants={orderedVariants} />
           </div>
 
           {/* Specs */}
@@ -187,7 +192,7 @@ export default async function ProductDetailPage({
             <Separator />
 
             {/* ProductActions (qty, variant, buttons) */}
-            <ProductActions product={product} />
+            <ProductActions product={product} orderedVariants={orderedVariants} />
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { Plus, Star, PackageX } from "lucide-react"
 import { toast } from "sonner"
 import { useCart } from "@/lib/cart-context"
@@ -11,6 +12,7 @@ import { Button } from "@/components/ui/button"
 
 export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart()
+  const router = useRouter()
 
   const discount = product.oldPrice
     ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
@@ -116,8 +118,13 @@ export function ProductCard({ product }: { product: Product }) {
               className="size-9 shrink-0"
               aria-label={`Tambah ${product.name} ke keranjang`}
               disabled={outOfStock}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault() // In case it's nested in a link, though it's inside a div here, the parent Link might trigger. Oh wait, the parent is a div, the link is separate.
                 if (outOfStock) return
+                if (product.variants && product.variants.length > 0) {
+                  router.push(`/produk/${product.slug}`)
+                  return
+                }
                 addItem(product)
                 toast.success("Ditambahkan ke keranjang", {
                   description: product.name,

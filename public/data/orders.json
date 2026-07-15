@@ -17,5 +17,24 @@
     ],
     "total": 18999000,
     "completedAt": "2026-06-22T08:44:49.556Z"
+  },
+  {
+    "id": 1784097387210,
+    "createdAt": "2026-07-15T06:36:27.210Z",
+    "status": "completed",
+    "name": "ee",
+    "address": "sold",
+    "phone": "08123456789",
+    "items": [
+      {
+        "slug": "ram-32gb-ddr4__V-Color Black (2x16GB DDR4)",
+        "name": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35 — V-Color Black (2x16GB DDR4)",
+        "price": 2500000,
+        "qty": 1,
+        "variant": "V-Color Black (2x16GB DDR4)"
+      }
+    ],
+    "total": 2500000,
+    "completedAt": "2026-07-15T06:36:55.045Z"
   }
 ]

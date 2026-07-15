@@ -9,18 +9,33 @@ import type { Product } from "@/lib/products"
 import { Button } from "@/components/ui/button"
 import { formatRupiah } from "@/lib/products"
 
-export function ProductActions({ product }: { product: Product }) {
+export function ProductActions({
+  product,
+  orderedVariants = [],
+}: {
+  product: Product
+  orderedVariants?: string[]
+}) {
   const { addItem } = useCart()
   const router = useRouter()
   const [qty, setQty] = useState(1)
   const hasVariants = product.variants && product.variants.length > 0
-  const [selectedVariant, setSelectedVariant] = useState(
-    hasVariants ? product.variants![0] : null
-  )
+
+  // Pilih varian pertama yang TIDAK sedang dipesan sebagai default
+  const firstAvailableVariant = hasVariants
+    ? (product.variants!.find((v) => !orderedVariants.includes(v.label)) ?? product.variants![0])
+    : null
+  // Tidak ada default — pembeli harus memilih sendiri
+  const [selectedVariant, setSelectedVariant] = useState<typeof firstAvailableVariant>(null)
+  const [variantError, setVariantError] = useState(false)
 
   const activePrice = selectedVariant ? selectedVariant.price : product.price
 
   const handleAddToCart = () => {
+    if (hasVariants && !selectedVariant) {
+      setVariantError(true)
+      return
+    }
     addItem(product, qty, selectedVariant ?? undefined)
     toast.success("Ditambahkan ke keranjang", {
       description: `${qty}x ${product.name}${selectedVariant ? ` — ${selectedVariant.label}` : ""}`,
@@ -28,6 +43,10 @@ export function ProductActions({ product }: { product: Product }) {
   }
 
   const handleBuyNow = () => {
+    if (hasVariants && !selectedVariant) {
+      setVariantError(true)
+      return
+    }
     addItem(product, qty, selectedVariant ?? undefined)
     router.push('/checkout')
   }
@@ -37,36 +56,65 @@ export function ProductActions({ product }: { product: Product }) {
       {/* Variant selector */}
       {hasVariants && (
         <div className="flex flex-col gap-2">
-          <span className="text-sm font-medium text-muted-foreground">Pilih Varian</span>
+          <span className="text-sm font-medium text-muted-foreground">
+            Pilih Varian
+            <span className="ml-1 text-destructive">*</span>
+          </span>
           <div className="flex flex-wrap gap-2">
-            {product.variants!.map((v) => {
+          {product.variants!.map((v) => {
               const isActive = selectedVariant?.label === v.label
+              const isOrdered = orderedVariants.includes(v.label)
               return (
                 <button
                   key={v.label}
                   type="button"
-                  onClick={() => setSelectedVariant(v)}
+                  disabled={isOrdered}
+                  onClick={() => {
+                    if (!isOrdered) {
+                      setSelectedVariant(v)
+                      setVariantError(false)
+                    }
+                  }}
                   className={`rounded-lg border px-4 py-2 text-sm font-medium transition-all duration-150 ${
-                    isActive
-                      ? "border-primary bg-primary/10 text-primary ring-1 ring-primary"
-                      : "border-border bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
+                    isOrdered
+                      ? "border-border/40 bg-muted/50 text-muted-foreground/40 cursor-not-allowed opacity-60"
+                      : isActive
+                        ? "border-primary bg-primary/10 text-primary ring-1 ring-primary"
+                        : "border-border bg-card text-muted-foreground hover:border-primary/60 hover:text-foreground"
                   }`}
                 >
-                  <span>{v.label}</span>
-                  <span className={`ml-2 text-xs ${isActive ? "text-primary/80" : "text-muted-foreground"}`}>
-                    {formatRupiah(v.price)}
-                  </span>
+                  <span className={isOrdered ? "line-through" : ""}>{v.label}</span>
+                  {isOrdered ? (
+                    <span className="ml-2 text-xs text-muted-foreground/40">Dipesan</span>
+                  ) : (
+                    <span className={`ml-2 text-xs ${isActive ? "text-primary/80" : "text-muted-foreground"}`}>
+                      {formatRupiah(v.price)}
+                    </span>
+                  )}
                 </button>
               )
             })}
           </div>
+          {variantError && (
+            <p className="text-xs text-destructive font-medium mt-0.5">
+              ⚠ Silakan pilih varian terlebih dahulu
+            </p>
+          )}
         </div>
       )}
 
-      {hasVariants && selectedVariant && (
-        <div className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-2.5">
+      {hasVariants && (
+        <div className={`rounded-lg border px-4 py-2.5 transition-colors ${
+          selectedVariant
+            ? "border-primary/20 bg-primary/5"
+            : "border-border/50 bg-muted/30"
+        }`}>
           <p className="text-xs text-muted-foreground">Harga varian terpilih</p>
-          <p className="text-xl font-bold text-primary">{formatRupiah(activePrice)}</p>
+          {selectedVariant ? (
+            <p className="text-xl font-bold text-primary">{formatRupiah(activePrice)}</p>
+          ) : (
+            <p className="text-sm text-muted-foreground/60 italic">Pilih varian di atas</p>
+          )}
         </div>
       )}
 

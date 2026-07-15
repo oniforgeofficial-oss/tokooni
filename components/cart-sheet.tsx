@@ -63,7 +63,10 @@ export function CartSheet({ trigger }: { trigger: React.ReactElement }) {
                   </div>
                   <div className="flex flex-1 flex-col">
                     <p className="text-sm font-medium leading-snug text-pretty">{item.name}</p>
-                    <p className="mt-0.5 text-sm font-semibold text-primary">{formatRupiah(item.price)}</p>
+                    {item.variant && (
+                      <p className="mt-0.5 text-xs text-muted-foreground">{item.variant}</p>
+                    )}
+                    <p className="mt-1 text-sm font-semibold text-primary">{formatRupiah(item.price)}</p>
                     <div className="mt-auto flex items-center justify-between">
                       <div className="flex items-center rounded-md border">
                         <button type="button" aria-label="Kurangi jumlah" onClick={() => updateQty(item.slug, item.qty - 1)} className="flex size-8 items-center justify-center text-muted-foreground hover:text-foreground">
