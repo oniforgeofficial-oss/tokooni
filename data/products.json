@@ -388,14 +388,14 @@
     "subcategory": "RAM",
     "brand": "Ramsta",
     "price": 1050000,
-    "stock": 1,
+    "stock": 0,
     "image": "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg",
     "shortDesc": "",
     "description": "Dijual RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz kondisi normal dan siap pakai. Cocok untuk upgrade PC gaming maupun editing agar performa lebih kencang dan multitasking lebih lancar.\n\nSpesifikasi\n\n✅ Brand: RAMSTA RGB Memory\n✅ Kapasitas: 16GB (2x8GB)\n✅ Tipe: DDR4\n✅ Kecepatan: 3200MHz\n✅ RGB Lighting aktif\n✅ Support Intel & AMD\n✅ Cocok untuk gaming, streaming, editing, dan kerja multitasking\n\nKondisi\n\n✅ Kondisi normal\n✅ Tidak ada kendala\n✅ Siap pakai tinggal pasang\n✅ Sudah dites berjalan stabil\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
     "images": [
       "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg"
     ],
-    "name": "RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz",
+    "name": "Sold - RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz",
     "slug": "ramsta-rgb-ddr4-16gb-2x8gb-3200mhz",
     "rating": 5,
     "sold": 0,
