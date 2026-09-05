@@ -1,0 +1,36 @@
+[
+  {
+    "id": "pc-1783436987049",
+    "title": "Aurora Prism R7",
+    "customer": "Anonim",
+    "description": "Aurora Prism R7 adalah PC gaming dan produktivitas premium yang menggabungkan performa tinggi dengan tampilan modern. Ditenagai AMD Ryzen 7 8700F berarsitektur Zen 4 dengan 8 core dan 16 thread, serta RAM DDR5 32GB RGB, build ini siap menangani gaming AAA, streaming, editing video, rendering, hingga multitasking berat dengan lancar.\n\nSistem pendingin Segotep LCD 240mm Liquid Cooler menjaga suhu prosesor tetap optimal, sementara desain panoramic tempered glass dan pencahayaan ARGB infinity memberikan tampilan yang elegan dan futuristik.\n\nCocok untuk:\n🎮 Gaming 1080p Ultra & 1440p\n🎥 Streaming\n🎬 Editing Video\n🖥️ Rendering & Desain Grafis\n💼 Multitasking & Produktivitas\nKeunggulan:\nRyzen 7 8700F 8 Core / 16 Thread\nRAM DDR5 32GB RGB\nLiquid Cooler LCD 240mm\nAirflow optimal dengan 6 ARGB Infinity Fan\nDesain panoramic premium dengan tempered glass\nSiap untuk upgrade di masa depan",
+    "specs": "Processor: AMD Ryzen 7 8700F (8 Core / 16 Thread)\nMotherboard: B650M DDR5\nCPU Cooler: Segotep LCD ARGB 240mm Liquid Cooler\nRAM: 32GB (2×16GB) XPG DDR5 RGB\nVGA: ZOTAC Gaming GeForce RTX 4060 Ti\nStorage: NVMe SSD (sesuaikan kapasitas)\nPSU: 650W–750W 80+ (sesuaikan merek & sertifikasi)\nCase: Panoramic Dual Chamber Tempered Glass\nFan: 6× ARGB Infinity Fan",
+    "image": "/api/files/739866662_953680157679010_5213245672120041588_n-1783436979422.jpg",
+    "images": [
+      "/api/files/739866662_953680157679010_5213245672120041588_n-1783436979422.jpg",
+      "/api/files/740106089_953680294345663_3487022035850106911_n-1783436979449.jpg",
+      "/api/files/742031550_953681081012251_4623018603960714383_n-1783436979503.jpg",
+      "/api/files/741304997_953681134345579_5432885341848906985_n-1783437067285.jpg",
+      "/api/files/739470867_953682851012074_8561768392708325064_n-1783437108472.jpg",
+      "/api/files/739140023_953681547678871_8188266349597596643_n-1783437110621.jpg"
+    ],
+    "createdAt": "2026-07-07T15:09:47.049Z"
+  },
+  {
+    "id": "pc-1783305367371",
+    "title": "Sunforge",
+    "customer": "Josh Eph",
+    "description": "Build ini kelihatan bersih, premium, dan bertema oranye-hitam. Aura ROG-nya cukup kuat walaupun tidak semua komponennya ROG",
+    "specs": "CPU\tRyzen 7 7700 / 7800X3D\nCooler\tSogdeep LCD 360 AIO\nMotherboard\tASUS ROG Strix B650E-F Gaming WiFi\nRAM\tXPG RGB DDR5 32GB–64GB\nVGA\tASUS TUF GeForce RTX 4070 / 4070 SUPER\nStorage\tNVMe Gen4 1TB\nPSU\t750–850W 80+ Gold\nFan\t10× ARGB\nCasing\tMVKT panoramic dual chamber",
+    "image": "/api/files/710573484_924991893881170_7716132184654237727_n-1783305337167.jpg",
+    "images": [
+      "/api/files/710573484_924991893881170_7716132184654237727_n-1783305337167.jpg",
+      "/api/files/710831309_924991703881189_7091095691159070917_n-1783305337182.jpg",
+      "/api/files/711729727_924991647214528_1653766853574320138_n-1783305337195.jpg",
+      "/api/files/712411321_924991820547844_1585344966636445538_n-1783305337211.jpg",
+      "/api/files/712686269_924991937214499_5751268707561754170_n-1783305337227.jpg",
+      "/api/files/713624494_924991757214517_1819160944544302603_n-1783305337250.jpg"
+    ],
+    "createdAt": "2026-07-06T02:36:07.372Z"
+  }
+]

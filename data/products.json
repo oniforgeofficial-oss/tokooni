@@ -1,0 +1,404 @@
+[
+  {
+    "category": "komponen",
+    "subcategory": "VGA",
+    "brand": "MSI",
+    "price": 3599000,
+    "stock": 0,
+    "image": "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-0-1783302040847.png",
+    "shortDesc": "✅ Fungsi tested\n✅ Kondisi 2nd mulus terawat\n✅ Suhu normal bukan pemarah \n✅ Unit only \n✅ Garansi Resmi off\n\n",
+    "name": "GeForce RTX 3060 VENTUS 2X 12G OC",
+    "slug": "VEN30602X12G",
+    "images": [
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-0-1783302040847.png",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-1-1783302040937.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-2-1783302040956.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-3-1783302040973.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-4-1783302040991.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-5-1783302041008.jpeg",
+      "/api/files/geforce-rtx-3060-ventus-2x-12g-oc-6-1783302041024.jpeg"
+    ],
+    "oldPrice": 3750000,
+    "specs": [
+      {
+        "label": "VRAM",
+        "value": "12GB GDDR6"
+      },
+      {
+        "label": "Memory Bus",
+        "value": "192-bit"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "hingga 1807 MHz"
+      },
+      {
+        "label": "Output",
+        "value": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+      },
+      {
+        "label": "Pendingin",
+        "value": "Dual Fan MSI TORX Fan 3.0"
+      },
+      {
+        "label": "Rekomendasi PSU",
+        "value": "Minimal 550W."
+      }
+    ],
+    "rating": 5,
+    "sold": 0,
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
+  },
+  {
+    "category": "komponen",
+    "subcategory": "VGA",
+    "brand": "NVIDIA",
+    "price": 5399000,
+    "stock": 0,
+    "image": "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-0-1783302477166.jpg",
+    "shortDesc": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V merupakan VGA gaming berbasis arsitektur NVIDIA Ada Lovelace dengan VRAM GDDR6 8GB. Mengusung desain putih premium dengan efek holographic RGB, sistem pendingin triple fan, serta fitur One-Key Overclock yang memungkinkan peningkatan performa hanya dengan menekan tombol pada bracket. Sangat cocok untuk gaming 1080p Ultra hingga 1440p High, content creation, editing video, dan live streaming. Mendukung DLSS 3, Ray Tracing generasi terbaru, AV1 Encoder, dan konsumsi daya yang efisien sekitar 115 sampai 130W.",
+    "name": "Colorful iGame GeForce RTX 4060 Ultra W OC 8GB-V",
+    "oldPrice": 5600000,
+    "images": [
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-0-1783302477166.jpg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-1-1783302477200.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-2-1783302477266.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-3-1783302477279.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-4-1783302477295.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-5-1783302477313.jpeg",
+      "/api/files/colorful-igame-geforce-rtx-4060-ultra-w-oc-8gb-v-6-1783302477327.jpeg"
+    ],
+    "specs": [
+      {
+        "label": "VRAM",
+        "value": "8GB GDDR6"
+      },
+      {
+        "label": "Memory Bus",
+        "value": "128-bit"
+      },
+      {
+        "label": "CUDA Cores",
+        "value": "3.072"
+      },
+      {
+        "label": "Boost Clock",
+        "value": "hingga sekitar 2.580 MHz"
+      },
+      {
+        "label": "Output",
+        "value": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
+      },
+      {
+        "label": "Power Connector",
+        "value": "1x 8-pin"
+      },
+      {
+        "label": "Fitur",
+        "value": "DLSS 3, Ray Tracing, AV1 Encoder, One-Key OC, RGB Lighting."
+      }
+    ],
+    "slug": "RTX4060UltraWOC8GB-V",
+    "rating": 5,
+    "sold": 0,
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
+  },
+  {
+    "category": "laptop-2nd",
+    "grade": "A",
+    "batteryHealth": 95,
+    "condition": "Kondisi:\n\n✅ Body mulus, normal bekas pemakaian\n✅ Layar jernih, tidak ada dead pixel\n✅ Keyboard & touchpad normal\n✅ Semua fungsi 100% normal\n✅ Baterai masih normal\n✅ Siap langsung digunakan\n\nKelengkapan:\n\nLaptop Dell Latitude\nCharger Original Dell\n\nCocok untuk:\n\nKerja kantoran\nKuliah\nZoom/Google Meet\nMicrosoft Office\nDesain ringan (Canva, Photoshop)\nProgramming\nBrowsing & Multimedia\n\nKeunggulan:\n\nBuild quality premium khas Dell Latitude\nPerforma cepat berkat SSD NVMe\nRingan dan mudah dibawa\nKeyboard nyaman untuk mengetik lama\nCocok untuk penggunaan harian maupun profesional\n\n📦 Packing aman dan rapi\n🛒 Barang siap kirim",
+    "price": 5799000,
+    "stock": 1,
+    "brand": "Dell",
+    "name": "Dell Latitude - 5330",
+    "shortDesc": "Dell Latitude 5330 Core i5 Gen 12 | RAM 16GB | SSD NVMe 512GB | 13\" IPS | Mulus Like New\n\nKondisi:\n\n✅ Body mulus, normal bekas pemakaian\n✅ Layar jernih, tidak ada dead pixel\n✅ Keyboard & touchpad normal\n✅ Semua fungsi 100% normal\n✅ Baterai masih normal\n✅ Siap langsung digunakan\n\nKelengkapan:\n\nLaptop Dell Latitude\nCharger Original Dell\n\nCocok untuk:\n\nKerja kantoran\nKuliah\nZoom/Google Meet\nMicrosoft Office\nDesain ringan (Canva, Photoshop)\nProgramming\nBrowsing & Multimedia\n\nKeunggulan:\n\nBuild quality premium khas Dell Latitude\nPerforma cepat berkat SSD NVMe\nRingan dan mudah dibawa\nKeyboard nyaman untuk mengetik lama\nCocok untuk penggunaan harian maupun profesional\n\n📦 Packing aman dan rapi\n🛒 Barang siap kirim",
+    "specs": [
+      {
+        "label": "Prosesor",
+        "value": "i5 Gen 12"
+      },
+      {
+        "label": "RAM",
+        "value": "16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "SSD NVMe 512GB"
+      },
+      {
+        "label": "Layar",
+        "value": "IPS 13'"
+      }
+    ],
+    "slug": "dell-latitude-5330",
+    "oldPrice": 13500000,
+    "image": "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1-1783332710286.jpeg",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1-1783332710286.jpeg",
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-2-1783332710310.jpeg",
+      "/api/files/whatsapp-image-2026-07-06-at-3-58-52-pm-1783332710327.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "subcategory": "Motherboard",
+    "brand": "ASUS",
+    "price": 899000,
+    "stock": 1,
+    "image": "/api/files/742129616_3102268046626808_8430447861996506236_n-1783437999248.jpg",
+    "shortDesc": "",
+    "name": "Ryzen5 3500x + ASUS A520M K Prime",
+    "slug": "ryzen5-3500x-asus-a520m-k-prime",
+    "oldPrice": 1000000,
+    "images": [
+      "/api/files/742129616_3102268046626808_8430447861996506236_n-1783437999248.jpg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": [],
+    "productCondition": "used",
+    "description": "",
+    "grade": "A"
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "subcategory": "Paket Mobo + Proc",
+    "brand": "ASUS",
+    "price": 5499000,
+    "stock": 1,
+    "image": "/api/files/738653473_952093217837704_7053645921311786689_n-1783442662330.jpg",
+    "shortDesc": "",
+    "description": "✅ ASUS PRIME Z790M-PLUS\n\nChipset Intel Z790\nSocket LGA1700\nSupport Intel Gen 12, 13 & 14\n4 Slot DDR5\nPCIe 5.0 x16\n3x M.2 NVMe PCIe 4.0\nHDMI + DisplayPort\nCocok untuk gaming maupun produktivitas.\n\n✅ Intel Core i7-12700F\n\n12 Core (8 Performance + 4 Efficient)\n20 Threads\nBoost hingga 4.9 GHz\nCache 25 MB\nCocok untuk Gaming, Editing, Rendering, Streaming, dan Multitasking.\n\nKondisi\n\n✅ Normal 100%\n✅ Siap pakai\n✅ Tidak ada kendala\n✅ Tes bebas sebelum deal (COD)\n\n📍 Lokasi: Tulungagung\n\n✅ COD\n✅ Kirim luar kota siap packing aman",
+    "name": "ASUS PRIME Z7290M PLUS + i7 12700F",
+    "slug": "asus-prime-z7290m-plus-i7-12700f",
+    "oldPrice": 5700000,
+    "images": [
+      "/api/files/738653473_952093217837704_7053645921311786689_n-1783442662330.jpg",
+      "/api/files/738796975_952093427837683_1864099602575600145_n-1783442662352.jpg",
+      "/api/files/735001922_952093284504364_4091775209460456034_n-1783442665786.jpg",
+      "/api/files/737674922_952093334504359_117075017583947610_n-1783442665810.jpg",
+      "/api/files/737875510_952093164504376_7982731528505824687_n-1783442665837.jpg",
+      "/api/files/738504000_952093501171009_4462214662170223848_n-1783442665858.jpg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": [],
+    "grade": "A"
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "Motherboard",
+    "brand": "MSI",
+    "price": 810000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-08-at-7-15-49-pm-1783587547789.jpeg",
+    "shortDesc": "",
+    "description": "Motherboard MSI MAG B460M Mortar bekas, kondisi normal dan siap pakai.\n\nSpesifikasi:\n\nSocket LGA1200\nChipset Intel B460\nForm Factor Micro-ATX\nSupport Intel Core Gen 10 (i3/i5/i7/i9), Pentium Gold & Celeron LGA1200\n4 Slot DDR4 (Dual Channel, hingga 128GB)\n2x M.2 NVMe (dengan M.2 Shield Frozr)\n6x SATA III\nPCIe 3.0 x16\nLAN 2.5GbE\nHDMI & DisplayPort\nAudio Realtek ALC1200\n\nKondisi:\n\n✅ Fungsi normal\n✅ Tidak pernah servis\n✅ Socket pin aman (tidak bengkok)\n✅ Fisik masih bagus (sesuai foto)\n✅ Cocok untuk build Intel Gen 10\n\nKelengkapan:\n\nMotherboard + Back panel only ",
+    "name": "MSI B460M Mortar",
+    "slug": "msi-b460m-mortar",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-08-at-7-15-49-pm-1783587547789.jpeg"
+    ],
+    "specs": [
+      {
+        "label": "Socket",
+        "value": "LGA1200"
+      },
+      {
+        "label": "Chipset",
+        "value": "B460"
+      },
+      {
+        "label": "",
+        "value": ""
+      }
+    ],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Gigabyte",
+    "price": 6049000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1783588063252.jpeg",
+    "shortDesc": "",
+    "description": "Kondisi mulus, normal 100%, siap pakai.\n\n✅ Tidak pernah bongkar/segel aman\n✅ Fan normal, suhu dingin\n✅ No artifact, no kendala\n✅ Plug & Play\n\nSpesifikasi:\n\n8GB GDDR7\nPCIe Gen 5\nDLSS 4\nRay Tracing\nAV1 Encoder\nWINDFORCE Cooling\nCocok Gaming 1080p Ultra & 1440p High\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "name": "GeForce RTX™ 5060 WINDFORCE 8G",
+    "slug": "geforce-rtx-5060-windforce-8g",
+    "oldPrice": 6200000,
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1783588063252.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-53-pm-1-1783588067389.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-53-pm-1783588067512.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-2-1783588067530.jpeg",
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-55-pm-1783588067550.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Zotac",
+    "price": 6149000,
+    "stock": 1,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1-1783588860617.jpeg",
+    "shortDesc": "",
+    "description": "Kondisi mulus, normal 100%, siap pakai. Cocok buat gaming, editing, rendering, maupun AI.\n\nSpesifikasi Singkat\n8GB GDDR7\nFactory Overclock (AMP Edition)\nDLSS 4\nRay Tracing\nNVIDIA Reflex\nAV1 Encoder\nPCIe Gen 5\nDual Fan Cooling\nFPS melimpah, anti patah-patah.",
+    "name": "ZOTAC GAMING GeForce RTX 5060 AMP 8GB GDDR7",
+    "slug": "zotac-gaming-geforce-rtx-5060-amp-8gb-gddr7",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-12-15-54-pm-1-1783588860617.jpeg"
+    ],
+    "specs": [],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "B",
+    "subcategory": "Storage",
+    "brand": "Toshiba",
+    "price": 875000,
+    "stock": 1,
+    "image": "/api/files/toshiba-1tb-1783611251162.jpeg",
+    "shortDesc": "",
+    "description": "🔥 SSD NVMe 1TB Murah – Speed Kencang!\n\nMau upgrade PC atau laptop biar makin ngebut? SSD ini siap pakai!\n\n✅ Kapasitas 1TB\n✅ Read sampai 3274 MB/s\n✅ Write sampai 3088 MB/s\n✅ Performance 100%\n✅ Health 74% (Good)\n✅ Sudah lolos pengecekan Hard Disk Sentinel & CrystalDiskMark\n\nBooting Windows, loading game, dan transfer file jadi jauh lebih cepat dibanding HDD maupun SATA SSD.",
+    "images": [
+      "/api/files/toshiba-1tb-1783611251162.jpeg"
+    ],
+    "name": "SSD NVMe Toshiba 1TB",
+    "slug": "ssd-nvme-toshiba-1tb",
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "RAM",
+    "brand": "XPG",
+    "price": 2600000,
+    "stock": 0,
+    "image": "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg",
+    "shortDesc": "",
+    "description": "RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35 | V-Color (Sold)\n\nDijual beberapa pilihan RAM DDR4 kapasitas 32GB (2x16GB) dalam kondisi bekas, normal, dan siap pakai.\n\nPilihan:\n\n✅ Apacer NOX White 32GB (2x16GB)\n✅ XPG GAMMIX D35 White 32GB (2x16GB)\n✅ V-Color Black 32GB (2x16GB)\n\nSpesifikasi:\n\nKapasitas: 32GB (2x16GB)\nTipe: DDR4 Desktop\nDual Channel Kit\nKondisi: Bekas, normal 100%\nSudah dites, siap pakai\nCocok untuk Intel & AMD (motherboard DDR4)\n\nCocok untuk gaming, editing, rendering, streaming, maupun upgrade PC agar multitasking lebih lancar.\n\n📌 Harga tertera untuk 1 set (2x16GB).\n📌 Silakan pilih merk sesuai stok yang tersedia.",
+    "name": "Sold - RAM DDR4 32GB (2x16GB) Dual Channel – Apacer NOX | XPG GAMMIX D35",
+    "slug": "ram-32gb-ddr4",
+    "images": [
+      "/api/files/whatsapp-image-2026-07-09-at-5-47-01-pm-1783611514745.jpeg"
+    ],
+    "variants": [
+      {
+        "label": "Apacer NOX White (2x16GB DDR4)",
+        "price": 2500000
+      },
+      {
+        "label": "XPG GAMMIX D35 (2x16GB DDR4)",
+        "price": 2500000
+      }
+    ],
+    "rating": 5,
+    "sold": 1,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "ASUS",
+    "price": 7100000,
+    "stock": 1,
+    "image": "/api/files/asus-rog-strix-rtx-4060ti-8gb-garansi-2029-hrga-user-7jt-1784045967202.jpeg",
+    "shortDesc": "",
+    "description": "Dijual ASUS ROG STRIX RTX 4060 Ti 8GB OC Edition\n\nKondisi mulus, normal 100%, siap pakai. Cocok buat gaming, editing, rendering, maupun AI.\n\nSpesifikasi:\n\n✅ VRAM 8GB GDDR6\n✅ Triple Fan Axial-tech Cooling\n✅ RGB Aura Sync\n✅ DLSS 3 & Ray Tracing\n✅ PCIe 4.0\n✅ HDMI 2.1a + 3x DisplayPort 1.4a\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "name": "ASUS ROG STRIX RTX 4060TI 8GB",
+    "slug": "asus-rog-strix-rtx-4060ti-8gb",
+    "images": [
+      "/api/files/asus-rog-strix-rtx-4060ti-8gb-garansi-2029-hrga-user-7jt-1784045967202.jpeg"
+    ],
+    "specs": [],
+    "rating": 5,
+    "sold": 0
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "VGA",
+    "brand": "Sapphire",
+    "price": 2200000,
+    "stock": 1,
+    "image": "/api/files/sapphire-rx-6600xt-8gb-2nd-garansi-off-personal-7hari-dari-aku-2-1jt-suhu-adem-normal-1784046321004.jpeg",
+    "shortDesc": "",
+    "description": "Dijual VGA Sapphire Pulse Radeon RX 6600 XT 8GB kondisi bekas, performa masih sangat normal dan siap pakai. Cocok untuk gaming 1080p High/Ultra, esports, hingga editing ringan. Suhu adem, fan normal, tidak ada kendala.\n\nSpesifikasi:\n\n✅ AMD Radeon RX 6600 XT\n✅ VRAM 8GB GDDR6\n✅ Dual Fan Cooling\n✅ PCIe 4.0\n✅ HDMI + 3x DisplayPort\n✅ Cocok untuk game AAA & esports 1080p High/Ultra\n\nKondisi:\n\n✅ Garansi resmi OFF\n✅ Garansi personal 7 hari (cek fungsi)\n✅ Suhu adem & performa normal\n✅ Siap pakai, tinggal pasang\n\n📍 Lokasi: Tulungagung \n\n✅ COD sesuai lokasi \n✅ Rekber oke \n✅ Kirim luar kota siap packing aman",
+    "name": "Sapphire Pulse Radeon RX 6600 XT 8GB",
+    "slug": "sapphire-pulse-radeon-rx-6600-xt-8gb",
+    "images": [
+      "/api/files/sapphire-rx-6600xt-8gb-2nd-garansi-off-personal-7hari-dari-aku-2-1jt-suhu-adem-normal-1784046321004.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "A",
+    "subcategory": "Paket Mobo + Proc",
+    "brand": "Intel",
+    "price": 1400000,
+    "stock": 1,
+    "image": "/api/files/i3-10100f-msi-h410m-lngkap-box-garansi-off-hrga-aku-1300-paketan-1784046391778.jpeg",
+    "shortDesc": "",
+    "description": "Dijual paket Intel Core i3-10100F + MSI PRO H410M-B, cocok untuk rakit PC gaming maupun produktivitas dengan budget terjangkau. Tinggal tambah RAM, SSD, PSU, dan VGA (karena seri F tidak memiliki iGPU).\n\nSpesifikasi:\n\n✅ Intel Core i3-10100F\n4 Core / 8 Thread\nBoost hingga 4.3 GHz\n✅ MSI PRO H410M-B\n✅ Socket LGA1200\n✅ Lengkap Box Motherboard\n✅ Support RAM DDR4\n✅ Support NVMe M.2 SSD\n\nKondisi:\n\n✅ Garansi resmi OFF\n✅ Kondisi normal, siap pakai\n✅ Sudah dites, performa normal\n\n📍 Lokasi: Tulungagung\n\n✅ COD Tulungagung & sekitarnya (bisa cek barang sampai puas)\n✅ Rekber welcome (sesuai ketentuan)\n✅ Pengiriman ke seluruh Indonesia\n✅ Packing aman & rapi menggunakan bubble wrap + kardus tebal",
+    "name": "Intel Core i3-10100F + MSI PRO H410M-B",
+    "slug": "intel-core-i3-10100f-msi-pro-h410m-b",
+    "images": [
+      "/api/files/i3-10100f-msi-h410m-lngkap-box-garansi-off-hrga-aku-1300-paketan-1784046391778.jpeg"
+    ],
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  },
+  {
+    "category": "komponen",
+    "productCondition": "used",
+    "grade": "B",
+    "subcategory": "RAM",
+    "brand": "Ramsta",
+    "price": 1050000,
+    "stock": 0,
+    "image": "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg",
+    "shortDesc": "",
+    "description": "Dijual RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz kondisi normal dan siap pakai. Cocok untuk upgrade PC gaming maupun editing agar performa lebih kencang dan multitasking lebih lancar.\n\nSpesifikasi\n\n✅ Brand: RAMSTA RGB Memory\n✅ Kapasitas: 16GB (2x8GB)\n✅ Tipe: DDR4\n✅ Kecepatan: 3200MHz\n✅ RGB Lighting aktif\n✅ Support Intel & AMD\n✅ Cocok untuk gaming, streaming, editing, dan kerja multitasking\n\nKondisi\n\n✅ Kondisi normal\n✅ Tidak ada kendala\n✅ Siap pakai tinggal pasang\n✅ Sudah dites berjalan stabil\n\n📍 Lokasi: Tulungagung\n\n✅ COD sesuai lokasi\n✅ Rekber oke\n✅ Kirim luar kota siap packing aman",
+    "images": [
+      "/api/files/ramsta-2x8gb-ddr4-rgb-3200mhz-ko-aku-1jt-1784046540158.jpeg"
+    ],
+    "name": "Sold - RAMSTA RGB DDR4 16GB (2x8GB) 3200MHz",
+    "slug": "ramsta-rgb-ddr4-16gb-2x8gb-3200mhz",
+    "rating": 5,
+    "sold": 0,
+    "specs": []
+  }
+]
