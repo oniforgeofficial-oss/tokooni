@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Wrench, Clock, Mail, ArrowRight } from "lucide-react"
+import { Wrench, Mail, ArrowRight } from "lucide-react"
 
 export default function MaintenancePage() {
   const [dots, setDots] = useState("")
@@ -65,13 +65,6 @@ export default function MaintenancePage() {
 
             {/* Info cards */}
             <div style={styles.cardGrid}>
-              <div style={styles.card}>
-                <Clock size={22} color="#60a5fa" />
-                <div>
-                  <p style={styles.cardTitle}>Estimasi Waktu</p>
-                  <p style={styles.cardDesc}>Beberapa jam ke depan</p>
-                </div>
-              </div>
               <div style={styles.card}>
                 <Mail size={22} color="#60a5fa" />
                 <div>
